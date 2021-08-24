@@ -1,0 +1,751 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="逸尘" href="https://yichenm.github.io.git/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="逸尘" href="https://yichenm.github.io.git/atom.xml" />
+<link rel="alternate" type="application/json" title="逸尘" href="https://yichenm.github.io.git/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="hexo-blog-逸尘,博客搭建教程" />
+
+
+<link rel="canonical" href="https://yichenm.github.io.git/2020/06/17/BlogOpen/">
+
+
+<meta name="description" content="# 0x01 Blog 介绍 上一个 Blog 版本发布于 2020 年的 9 月份，是在 洪卫の博客 基础上进行修改的。自从发布以来有很多网友都私信搭建了博客，同时也发现了旧版本中存在的一些问题需要解决，例如：搜索框不适配 XML 代码搜索，部分图片失效，代码块问题以及各种小问题。现在将最新的 LuckyBlog 版本代码发布出来，修复改进了不少的 BUG，使其更加稳定运行。同时完善了博客的基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="逸尘Blog开源搭建教程">
+<meta property="og:url" content="https://yichenm.github.io.git/2020/06/17/BlogOpen/index.html">
+<meta property="og:site_name" content="逸尘">
+<meta property="og:description" content="# 0x01 Blog 介绍 上一个 Blog 版本发布于 2020 年的 9 月份，是在 洪卫の博客 基础上进行修改的。自从发布以来有很多网友都私信搭建了博客，同时也发现了旧版本中存在的一些问题需要解决，例如：搜索框不适配 XML 代码搜索，部分图片失效，代码块问题以及各种小问题。现在将最新的 LuckyBlog 版本代码发布出来，修复改进了不少的 BUG，使其更加稳定运行。同时完善了博客的基础">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20210518202657.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20210518204521.JPG">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20210518204949.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/posts/20200916213029.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/posts/20200916235833.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/posts/20201008183019.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/posts/20201008183219.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/posts/20201008183808.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20210518211242.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20210518210629.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20210518211817.png">
+<meta property="article:published_time" content="2020-06-16T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-24T08:09:44.877Z">
+<meta property="article:author" content="逸尘">
+<meta property="article:tag" content="hexo-blog-逸尘">
+<meta property="article:tag" content="博客搭建教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20210518202657.png">
+
+
+  <title>
+逸尘Blog开源搭建教程 - 博客篇 |
+Yi Chen = 逸尘 = 逸尘の博客</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">逸尘Blog开源搭建教程
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-06-17 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-06-17T00:00:00+08:00">2020-06-17</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yi Chen</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclj9410cj20zk0m8h12.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipesx5fdwj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeun65urj20zk0m81ii.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" itemprop="item" rel="index" title="分类于 博客篇"><span itemprop="name">博客篇</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://yichenm.github.io.git/2020/06/17/BlogOpen/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="逸尘">
+    <meta itemprop="description" content="逸尘の博客, 专注于Web,分享生活,分享知识">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="逸尘">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h3 id="0x01-blog-介绍"><a class="anchor" href="#0x01-blog-介绍">#</a> 0x01 Blog 介绍</h3>
+<p>上一个 Blog 版本发布于 2020 年的 9 月份，是在 <span class="exturl" data-url="aHR0cHM6Ly9zdW5od2VlLmNvbS8=">洪卫の博客</span> 基础上进行修改的。自从发布以来有很多网友都私信搭建了博客，同时也发现了旧版本中存在的一些问题需要解决，例如：搜索框不适配 XML 代码搜索，部分图片失效，代码块问题以及各种小问题。现在将最新的 LuckyBlog 版本代码发布出来，修复改进了不少的 BUG，使其更加稳定运行。同时完善了博客的基础功能，例如：音乐、视频、相册、百宝箱等页面。同时增加了不少的新功能，例如：适配 Hexo5.x、黑白天浏览模式、仿 Windows 页面，站点统计等。</p>
+<ul>
+<li>博客演示地址：<span class="exturl" data-url="aHR0cHM6Ly95aWNoZW5tLmdpdGh1Yi5pby8=">https://yichenm.github.io/</span></li>
+<li>开源项目地址：<span class="exturl" data-url="aHR0cHM6Ly95aWNoZW5tLmdpdGh1Yi5pby8=">https://yichenm.github.io/</span></li>
+</ul>
+<p><strong>主题特性</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" checked="true" disabled="true" /><label for="cbx_0"> 简单漂亮，文章内容美观易读</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" checked="true" disabled="true" /><label for="cbx_1"> <span class="exturl" data-url="aHR0cHM6Ly9tYXRlcmlhbC5pby8=">Material Design</span> 设计</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_2" checked="true" disabled="true" /><label for="cbx_2"> 响应式设计，博客在桌面端、平板、手机等设备上均能很好的展现</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_3" checked="true" disabled="true" /><label for="cbx_3"> 首页轮播文章及每天动态切换  <code>Banner</code>  图片</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_4" checked="true" disabled="true" /><label for="cbx_4"> 瀑布流式的博客文章列表（文章无特色图片时会有  <code>24</code>  张漂亮的图片代替）</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_5" checked="true" disabled="true" /><label for="cbx_5"> 时间轴式的归档页</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" checked="true" disabled="true" /><label for="cbx_6">  <code>词云</code> 的标签页和 <code>雷达图</code> 的分类页</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" checked="true" disabled="true" /><label for="cbx_7"> 丰富的关于我页面（包括关于我、文章统计图、我的项目、我的技能、相册等）</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_8" checked="true" disabled="true" /><label for="cbx_8"> 可自定义的数据的友情链接页面</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_9" checked="true" disabled="true" /><label for="cbx_9"> 支持文章置顶和文章打赏</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" checked="true" disabled="true" /><label for="cbx_10"> 支持  <code>MathJax</code> </label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_11" checked="true" disabled="true" /><label for="cbx_11">  <code>TOC</code>  目录，优化了目录显示效果</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_12" checked="true" disabled="true" /><label for="cbx_12"> 可设置复制文章内容时追加版权信息</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_13" checked="true" disabled="true" /><label for="cbx_13"> 可设置阅读文章时做密码验证</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_14" checked="true" disabled="true" /><label for="cbx_14"> <span class="exturl" data-url="aHR0cHM6Ly9naXRhbGsuZ2l0aHViLmlvLw==">Gitalk</span>、<span class="exturl" data-url="aHR0cHM6Ly9pbXN1bi5naXRodWIuaW8vZ2l0bWVudC8=">Gitment</span>、<span class="exturl" data-url="aHR0cHM6Ly92YWxpbmUuanMub3JnLw==">Valine</span> 和 <span class="exturl" data-url="aHR0cHM6Ly9kaXNxdXMuY29tLw==">Disqus</span> 评论模块（推荐使用  <code>Valine</code> ）</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_15" checked="true" disabled="true" /><label for="cbx_15"> 集成了<span class="exturl" data-url="aHR0cDovL2J1c3VhbnppLmlicnVjZS5pbmZvLw==">不蒜子统计</span>、谷歌分析（ <code>Google Analytics</code> ）和文章字数统计等功能</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_16" checked="true" disabled="true" /><label for="cbx_16"> 支持在首页的音乐播放和视频播放功能</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_17" checked="true" disabled="true" /><label for="cbx_17"> 修改了原主题以及基础主题中的一些 <code>BUG</code> </label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_18" checked="true" disabled="true" /><label for="cbx_18"> 加入图片懒加载功能，在根目录配置文件开启和关闭</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_19" checked="true" disabled="true" /><label for="cbx_19"> 增加 <code>留言板</code> 功能</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_20" checked="true" disabled="true" /><label for="cbx_20"> 在关于板块，加入 <code>简历</code> 功能页</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_21" checked="true" disabled="true" /><label for="cbx_21"> 增加完善 <code>音乐</code> 、 <code>相册</code> 、 <code>视频</code> 等功能页面</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_22" checked="true" disabled="true" /><label for="cbx_22"> 支持 <code>emoji</code>  表情，用 <code>markdown emoji</code>  语法书写直接生成对应的能<strong>跳跃</strong>的表情</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_23" checked="true" disabled="true" /><label for="cbx_23"> 增加网站运行时间显示</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_24" checked="true" disabled="true" /><label for="cbx_24"> 增加 <code>live2d</code>  动漫人物模型</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_25" checked="true" disabled="true" /><label for="cbx_25"> 整体替换 Banner 图片和文章特色图片</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_26" checked="true" disabled="true" /><label for="cbx_26"> 增加实用的快捷导航栏功能</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_27" checked="true" disabled="true" /><label for="cbx_27"> 修改了一些控件的参数以及部分样式</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_28" checked="true" disabled="true" /><label for="cbx_28"> 优化了代码显示块的效果</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_29" checked="true" disabled="true" /><label for="cbx_29"> 增加页面樱花飘落动效</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_30" checked="true" disabled="true" /><label for="cbx_30"> 增加鼠标点击烟花爆炸动效</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_31" checked="true" disabled="true" /><label for="cbx_31"> 增加页面雪花飘落动效</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_32" checked="true" disabled="true" /><label for="cbx_32"> 增加博客白云背景效果</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_33" checked="true" disabled="true" /><label for="cbx_33"> 增加天气接口控件</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_34" checked="true" disabled="true" /><label for="cbx_34"> 加入鼠标点击文字特效</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_35" checked="true" disabled="true" /><label for="cbx_35"> 增加 <code>DaoVoice</code>  在线聊天插件</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_36" checked="true" disabled="true" /><label for="cbx_36"> 增加博客代码、图片压缩功能</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_37" checked="true" disabled="true" /><label for="cbx_37"> 增加黑白天浏览模式功能</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_38" checked="true" disabled="true" /><label for="cbx_38"> 增加仿 <code>Windows</code>  功能</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_39" checked="true" disabled="true" /><label for="cbx_39"> 增加站点统计功能</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_40" checked="true" disabled="true" /><label for="cbx_40"> 增加留言版一言功能</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_41" checked="true" disabled="true" /><label for="cbx_41"> 其他</label></li>
+</ul>
+<h3 id="0x02-blog-安装"><a class="anchor" href="#0x02-blog-安装">#</a> 0x02 Blog 安装</h3>
+<h4 id="1-安装git"><a class="anchor" href="#1-安装git">#</a> 1. 安装 Git</h4>
+<p><code>Git</code>  是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。 <code>Git</code>  的作用是将本地的网页文件传到 <code>github</code>  上。</p>
+<ul>
+<li>Git<span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZA=="> 下载地址</span></li>
+<li>Git<span class="exturl" data-url="aHR0cHM6Ly93d3cubGlhb3h1ZWZlbmcuY29tL3dpa2kvODk2MDQzNDg4MDI5NjAw"> 教程</span></li>
+</ul>
+<p><strong>windows：</strong> 到 git 官网上下载.exe 文件，Download git, 安装选项全部默认即可。</p>
+<h4 id="2-安装nodejs"><a class="anchor" href="#2-安装nodejs">#</a> 2. 安装 node.js</h4>
+<p><code>Hexo</code>  是基于 <code>node.js</code>  编写的，所以需要安装一下 <code>node.js</code>  和里面的 <code>npm</code>  工具。</p>
+<p><strong>windows：</strong> 到<span class="exturl" data-url="aHR0cDovL25vZGVqcy5jbi9kb3dubG9hZC8="> Node.js 官网</span>下载 <code>.exe</code>  文件，安装选项全部默认。安装好之后，按 <code>Win+R</code>  打开 cmd 命令提示符，输入 <code>node -v</code>  和 <code>npm -v</code> ，若出现版本号，则说明安装成功。</p>
+<h4 id="3-添加npm国内源"><a class="anchor" href="#3-添加npm国内源">#</a> 3. 添加 npm 国内源</h4>
+<p>使用阿里的国内镜像进行加速下载</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry https://registry.npm.taobao.org</pre></td></tr></table></figure><h4 id="4-安装hexo"><a class="anchor" href="#4-安装hexo">#</a> 4. 安装 Hexo</h4>
+<p>前面 <code>git</code>  和 <code>nodejs</code>  安装好后，就可以安装 <code>hexo</code>  了，你可以先创建一个文件夹 <code>MyBlog</code> ，用来存放自己的博客文件，然后 <code>cd</code>  到这个文件夹下（或者在这个文件夹下直接鼠标右键 <code>git bash</code>  打开）。</p>
+<p>比如我的博客文件都存放在 <code>C:\MyBlog</code>  目录下。</p>
+<p>在该目录下右键点击 <code>Git Bash Here</code> ，打开 <code>git</code>  的控制台窗口，以后我们所有的操作都在 <code>git</code>  控制台进行，就不用 <code>Windows</code>  自带的 <code>cmd</code>  了。</p>
+<p>定位到该目录下，输入 <code>npm install -g hexo-cli</code>  安装 <code>Hexo</code> 。可能会有几个报错，不用理会。</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli</pre></td></tr></table></figure><p>安装完后输入 <code>hexo -v</code>  验证是否安装成功。</p>
+<p>接下来初始化一下 <code>hexo</code> , 即初始化我们的博客网站。例如我的在 <code>C:\MyBlog</code>  文件夹下的命令行中，输入 <code>hexo init</code>  初始化文件夹</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>hexo init</pre></td></tr></table></figure><p>新建完成后，指定文件夹 <code>MyBlog</code>  目录下有：</p>
+<ul>
+<li><code>node_modules</code> : 依赖包</li>
+<li><code>public</code> ：存放生成的页面</li>
+<li><code>scaffolds</code> ：生成文章的一些模板</li>
+<li><code>source</code> ：用来存放你的文章</li>
+<li><code>themes</code> ：主题 **</li>
+<li><code>_config.yml</code> : 博客的配置文件 **</li>
+</ul>
+<p>到此为止，本地的 Hexo 基础环境搭建完成了。</p>
+<h4 id="5-安装逸尘blog"><a class="anchor" href="#5-安装逸尘blog">#</a> 5. 安装逸尘 Blog</h4>
+<p>下载源代码到本地文件下</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">git</span> clone https://github.com/LuckyZmj/LuckyBlog.git</pre></td></tr></table></figure><p>将下载好的 <code>LuckyBlog</code>  全部复制到 <code>MyBlog</code>  目录下，如果复制过程中出现重复文件，点击替换。</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20210518202657.png" alt="" /></p>
+<p>最后使用  <code>npm i</code>  或者  <code>npm install</code>  安装依赖环境包即可。</p>
+<blockquote>
+<p>如果安装依赖环境出错，可以参考<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NldmVuNzExMTEvYXJ0aWNsZS9kZXRhaWxzLzEwMzM2NDczOA==">这篇文章</span>。</p>
+</blockquote>
+<p>最后执行  <code>hexo clean</code>  和  <code>hexo s -g</code>  启动 Hexo 本地预览，即可看到效果。</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20210518204521.JPG" alt="" /></p>
+<p>到此为止 LuckyBlog 安装完成，接下来就是个性化设置了。</p>
+<h3 id="0x03-逸尘blog-个性化"><a class="anchor" href="#0x03-逸尘blog-个性化">#</a> 0x03 逸尘 Blog 个性化</h3>
+<blockquote>
+<p>注意！注意！注意！在阅读以下博客个性化之前，最好希望大家有 Hexo 博客配置主题的基础。如果是完全小白，建议去网上搜索学习相关 Hexo 搭建博客的过程，另外去 B 站上也有很多视频教程。博客个性化是需要大家有耐心的，因为每个人的操作不同，在配置过程中可能会遇到一些不可预期的问题，希望大家可以克服这些困难，如有需要帮助，也可以私信博主帮助大家解决问题。</p>
+</blockquote>
+<h4 id="1-修改部署平台"><a class="anchor" href="#1-修改部署平台">#</a> 1. 修改部署平台</h4>
+<p>编辑根目录下的配置文件 <code>MyBlog/_config.yml</code> ，找到如下内容并修改</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>deploy:</pre></td></tr><tr><td data-num="2"></td><td><pre>- type: <span class="token function">git</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  repo: git@github.com:LuckyZmj/LuckyZmj.github.io.git <span class="token comment"># 替换为你的部署平台地址</span></pre></td></tr><tr><td data-num="4"></td><td><pre>  branch: master</pre></td></tr></table></figure><h4 id="2-修改网站信息"><a class="anchor" href="#2-修改网站信息">#</a> 2. 修改网站信息</h4>
+<p>编辑根目录下的配置文件 <code>MyBlog/_config.yml</code> ，找到如下内容并修改</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># Site</span></pre></td></tr><tr><td data-num="2"></td><td><pre>title: 逸尘</pre></td></tr><tr><td data-num="3"></td><td><pre>subtitle: <span class="token string">'逸尘の博客'</span>  </pre></td></tr><tr><td data-num="4"></td><td><pre>description: <span class="token string">'本科 | 计算机科学与技术 | 网络安全'</span></pre></td></tr><tr><td data-num="5"></td><td><pre>keywords: <span class="token string">'luckyzmj 计算机 网络安全 渗透测试'</span>  <span class="token comment"># 博客网站关键词</span></pre></td></tr><tr><td data-num="6"></td><td><pre>author: Luckey   <span class="token comment"># 博主名称</span></pre></td></tr><tr><td data-num="7"></td><td><pre>language: zh-CN</pre></td></tr><tr><td data-num="8"></td><td><pre>timezone: <span class="token string">''</span></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token comment"># URL</span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token comment">## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'</span></pre></td></tr><tr><td data-num="12"></td><td><pre>url: http://www.luckyzmj.cn   <span class="token comment"># 更改为你的博客地址</span></pre></td></tr><tr><td data-num="13"></td><td><pre>root: /</pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token comment"># permalink: :year/:month/:day/:title/</span></pre></td></tr><tr><td data-num="15"></td><td><pre>permalink: posts/:abbrlink.html  <span class="token comment"># p 是自定义的前缀</span></pre></td></tr><tr><td data-num="16"></td><td><pre>abbrlink:</pre></td></tr><tr><td data-num="17"></td><td><pre>    alg: crc32   <span class="token comment">#算法： crc16 (default) and crc32</span></pre></td></tr><tr><td data-num="18"></td><td><pre>    rep: hex     <span class="token comment">#进制： dec (default) and hex</span></pre></td></tr><tr><td data-num="19"></td><td><pre>permalink_defaults:</pre></td></tr><tr><td data-num="20"></td><td><pre>pretty_urls:</pre></td></tr><tr><td data-num="21"></td><td><pre>  trailing_index: <span class="token boolean">true</span> <span class="token comment"># Set to false to remove trailing 'index.html' from permalinks</span></pre></td></tr><tr><td data-num="22"></td><td><pre>  trailing_html: <span class="token boolean">true</span> <span class="token comment"># Set to false to remove trailing '.html' from permalinks</span></pre></td></tr></table></figure><h4 id="3-修改博客头像"><a class="anchor" href="#3-修改博客头像">#</a> 3. 修改博客头像</h4>
+<p>编辑主题目录下的配置文件 <code>MyBlog/themes/matery/_config.yml</code> ，找到如下内容并修改</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># Configure website favicon and LOGO</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># 将以下改为自己的头像链接即可</span></pre></td></tr><tr><td data-num="3"></td><td><pre>favicon: https://s1.ax1x.com/2020/05/17/YR20js.jpg</pre></td></tr><tr><td data-num="4"></td><td><pre>logo: https://s1.ax1x.com/2020/05/17/YRWsYT.png</pre></td></tr></table></figure><h4 id="4-修改留言板简介"><a class="anchor" href="#4-修改留言板简介">#</a> 4. 修改留言板简介</h4>
+<p>演示效果如下：</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20210518204949.png" alt="" /></p>
+<p>编辑  <code>/MyBlog/contact/index.md</code> ，修改你想要内容即可</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>---</pre></td></tr><tr><td data-num="2"></td><td><pre>title: contact</pre></td></tr><tr><td data-num="3"></td><td><pre>date: <span class="token number">2019</span>-10-25 00:00:00</pre></td></tr><tr><td data-num="4"></td><td><pre>type: <span class="token string">"contact"</span></pre></td></tr><tr><td data-num="5"></td><td><pre>layout: <span class="token string">"contact"</span></pre></td></tr><tr><td data-num="6"></td><td><pre>---</pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token comment">## 畅所欲言</span></pre></td></tr><tr><td data-num="9"></td><td><pre>---</pre></td></tr><tr><td data-num="10"></td><td><pre>在这里可以留下你的足迹，欢迎在下方留言，欢迎交换友链，一起交流学习！</pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token comment">## 友链</span></pre></td></tr><tr><td data-num="13"></td><td><pre>---</pre></td></tr><tr><td data-num="14"></td><td><pre>逸尘_Meの友链信息</pre></td></tr><tr><td data-num="15"></td><td><pre></pre></td></tr><tr><td data-num="16"></td><td><pre>博客名称: 逸尘_Meの博客</pre></td></tr><tr><td data-num="17"></td><td><pre></pre></td></tr><tr><td data-num="18"></td><td><pre>博客网址: http://luckyzmj.cn</pre></td></tr><tr><td data-num="19"></td><td><pre></pre></td></tr><tr><td data-num="20"></td><td><pre>博客头像: https://s1.ax1x.com/2020/05/17/YRWsYT.png</pre></td></tr><tr><td data-num="21"></td><td><pre></pre></td></tr><tr><td data-num="22"></td><td><pre>博客介绍: 知识面决定攻击面，知识链决定攻击深度！</pre></td></tr></table></figure><h4 id="5-修改音乐列表"><a class="anchor" href="#5-修改音乐列表">#</a> 5. 修改音乐列表</h4>
+<p>想要修改自己喜欢的音乐之前，需要先获取音乐列表的 id。</p>
+<p>以 QQ 音乐为例：先登录<span class="exturl" data-url="aHR0cHM6Ly95LnFxLmNvbS8="> QQ 音乐网页版</span>，点击打开自己喜欢的音乐列表，在网页的 URL 处包含了音乐列表的 id，如下图所示</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/posts/20200916213029.png" alt="" /></p>
+<p>编辑主题目录下的配置文件 <code>MyBlog/themes/matery/_config.yml</code> ，找到如下内容并修改</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 默认是博主的 QQ 音乐的 id，大家可以改为自己音乐喜欢列表的 id</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># 更新完 id，就可以同步加载自己喜欢的列表音乐了</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment"># Whether to display the musics.</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment"># 是否在首页显示音乐.</span></pre></td></tr><tr><td data-num="6"></td><td><pre>music:</pre></td></tr><tr><td data-num="7"></td><td><pre>  enable: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="8"></td><td><pre>  title: <span class="token comment">#非吸底模式有效</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    enable: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    show: 听听音乐</pre></td></tr><tr><td data-num="11"></td><td><pre>  autoHide: <span class="token boolean">true</span>    <span class="token comment"># hide automaticaly</span></pre></td></tr><tr><td data-num="12"></td><td><pre>  server: tencent   <span class="token comment">#require  music platform: netease, tencent, kugou, xiami, baidu</span></pre></td></tr><tr><td data-num="13"></td><td><pre>  type: playlist    <span class="token comment">#require song, playlist, album, search, artist</span></pre></td></tr><tr><td data-num="14"></td><td><pre>  id: <span class="token number">1776127550</span>     <span class="token comment">#require song id / playlist id / album id / search keyword</span></pre></td></tr><tr><td data-num="15"></td><td><pre>  fixed: <span class="token boolean">true</span>       <span class="token comment"># 开启吸底模式</span></pre></td></tr><tr><td data-num="16"></td><td><pre>  autoplay: <span class="token boolean">false</span>   <span class="token comment"># 是否自动播放</span></pre></td></tr><tr><td data-num="17"></td><td><pre>  theme: <span class="token string">'#42b983'</span></pre></td></tr><tr><td data-num="18"></td><td><pre>  loop: <span class="token string">'all'</span>       <span class="token comment"># 音频循环播放，可选值: 'all', 'one', 'none'</span></pre></td></tr><tr><td data-num="19"></td><td><pre>  order: <span class="token string">'random'</span>   <span class="token comment"># 音频循环顺序，可选值: 'list', 'random'</span></pre></td></tr><tr><td data-num="20"></td><td><pre>  preload: <span class="token string">'auto'</span>   <span class="token comment"># 预加载，可选值: 'none', 'metadata', 'auto'</span></pre></td></tr><tr><td data-num="21"></td><td><pre>  volume: <span class="token number">0.7</span>       <span class="token comment"># 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span></pre></td></tr><tr><td data-num="22"></td><td><pre>  listFolded: <span class="token boolean">true</span>  <span class="token comment"># 列表默认折叠</span></pre></td></tr><tr><td data-num="23"></td><td><pre>  hideLrc: <span class="token boolean">true</span>     <span class="token comment"># 隐藏歌词</span></pre></td></tr><tr><td data-num="24"></td><td><pre></pre></td></tr><tr><td data-num="25"></td><td><pre><span class="token comment"># Whether to display the musics.</span></pre></td></tr><tr><td data-num="26"></td><td><pre><span class="token comment"># 单独的音乐页面.</span></pre></td></tr><tr><td data-num="27"></td><td><pre>musics:</pre></td></tr><tr><td data-num="28"></td><td><pre>  enable: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="29"></td><td><pre>  title:          <span class="token comment">#非吸底模式有效</span></pre></td></tr><tr><td data-num="30"></td><td><pre>    enable: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="31"></td><td><pre>    show: 听听音乐</pre></td></tr><tr><td data-num="32"></td><td><pre>  server: tencent   <span class="token comment">#require music platform: netease, tencent, kugou, xiami, baidu</span></pre></td></tr><tr><td data-num="33"></td><td><pre>  type: playlist    <span class="token comment">#require song, playlist, album, search, artist</span></pre></td></tr><tr><td data-num="34"></td><td><pre>  id: <span class="token number">1776127550</span>     <span class="token comment">#require song id / playlist id / album id / search keyword</span></pre></td></tr><tr><td data-num="35"></td><td><pre>  fixed: <span class="token boolean">false</span>      <span class="token comment"># 开启吸底模式</span></pre></td></tr><tr><td data-num="36"></td><td><pre>  autoplay: <span class="token boolean">true</span>   <span class="token comment"># 是否自动播放</span></pre></td></tr><tr><td data-num="37"></td><td><pre>  theme: <span class="token string">'#42b983'</span></pre></td></tr><tr><td data-num="38"></td><td><pre>  loop: <span class="token string">'all'</span>       <span class="token comment"># 音频循环播放，可选值: 'all', 'one', 'none'</span></pre></td></tr><tr><td data-num="39"></td><td><pre>  order: <span class="token string">'random'</span>   <span class="token comment"># 音频循环顺序，可选值: 'list', 'random'</span></pre></td></tr><tr><td data-num="40"></td><td><pre>  preload: <span class="token string">'auto'</span>   <span class="token comment"># 预加载，可选值: 'none', 'metadata', 'auto'</span></pre></td></tr><tr><td data-num="41"></td><td><pre>  volume: <span class="token number">0.7</span>       <span class="token comment"># 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span></pre></td></tr><tr><td data-num="42"></td><td><pre>  listFolded: <span class="token boolean">false</span>  <span class="token comment"># 列表默认折叠</span></pre></td></tr><tr><td data-num="43"></td><td><pre>  listMaxHeight: <span class="token string">"525px"</span> <span class="token comment">#列表最大高度</span></pre></td></tr></table></figure><h4 id="6-绑定-valine-评论"><a class="anchor" href="#6-绑定-valine-评论">#</a> 6. 绑定 Valine 评论</h4>
+<p>编辑主题目录下的配置文件 <code>MyBlog/themes/matery/_config.yml</code> ，找到如下内容并修改</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.</span></pre></td></tr><tr><td data-num="2"></td><td><pre>valine:</pre></td></tr><tr><td data-num="3"></td><td><pre>  enable: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="4"></td><td><pre>  appId: Ucrxxxxxxxxxxxxxxxx-xxxxsz  <span class="token comment"># 自行注册 valine 获取</span></pre></td></tr><tr><td data-num="5"></td><td><pre>  appKey: zPsLxxxxxxxxxxxxxxerLmd    <span class="token comment"># 自行注册 valine 获取</span></pre></td></tr><tr><td data-num="6"></td><td><pre>  notify: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="7"></td><td><pre>  verify: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="8"></td><td><pre>  visitor: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="9"></td><td><pre>  avatar: <span class="token string">'monsterid'</span> <span class="token comment"># Gravatar style : mm/identicon/monsterid/wavatar/retro/hide</span></pre></td></tr><tr><td data-num="10"></td><td><pre>  pageSize: <span class="token number">10</span></pre></td></tr><tr><td data-num="11"></td><td><pre>  placeholder: <span class="token string">'留下你的足迹..'</span> <span class="token comment"># Comment Box placeholder</span></pre></td></tr><tr><td data-num="12"></td><td><pre>  background: /medias/comment_bg.png</pre></td></tr><tr><td data-num="13"></td><td><pre>  count: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="14"></td><td><pre>  enableQQ: <span class="token number">16463223</span>  <span class="token comment"># 改为自己的 QQ 号</span></pre></td></tr><tr><td data-num="15"></td><td><pre>  recordIP: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="16"></td><td><pre>  requiredFields: </pre></td></tr><tr><td data-num="17"></td><td><pre>    - nick</pre></td></tr><tr><td data-num="18"></td><td><pre>    - mail</pre></td></tr><tr><td data-num="19"></td><td><pre>  guest_info: </pre></td></tr><tr><td data-num="20"></td><td><pre>    - nick</pre></td></tr><tr><td data-num="21"></td><td><pre>    - mail</pre></td></tr><tr><td data-num="22"></td><td><pre>    - <span class="token function">link</span></pre></td></tr><tr><td data-num="23"></td><td><pre>  master: </pre></td></tr><tr><td data-num="24"></td><td><pre>    - 46606772953bed0812789d6dc955614e  <span class="token comment"># md5 加密后的博主邮箱</span></pre></td></tr><tr><td data-num="25"></td><td><pre>  metaPlaceholder:  <span class="token comment"># 输入框的背景文字</span></pre></td></tr><tr><td data-num="26"></td><td><pre>    nick: 昵称/QQ号<span class="token punctuation">(</span>必填<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="27"></td><td><pre>    mail: 邮箱<span class="token punctuation">(</span>必填<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="28"></td><td><pre>    link: 网址<span class="token punctuation">(</span>https://<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="29"></td><td><pre>  lang: zh-CN</pre></td></tr><tr><td data-num="30"></td><td><pre>  tagMeta: <span class="token comment"># The String Array of Words to show Flag.[Just Only xCss Style mode]</span></pre></td></tr><tr><td data-num="31"></td><td><pre>    - 博主</pre></td></tr><tr><td data-num="32"></td><td><pre>    - 小伙伴</pre></td></tr><tr><td data-num="33"></td><td><pre>    - 访客</pre></td></tr><tr><td data-num="34"></td><td><pre>  friends: <span class="token comment"># The MD5 String Array of friends Email to show friends Flag.[Just Only xCss Style mode]</span></pre></td></tr><tr><td data-num="35"></td><td><pre>    - cb3e577ff029d6073400d5557effd41f   </pre></td></tr><tr><td data-num="36"></td><td><pre>    -</pre></td></tr></table></figure><h4 id="7-绑定-daovoice-在线聊天"><a class="anchor" href="#7-绑定-daovoice-在线聊天">#</a> 7. 绑定 DaoVoice 在线聊天</h4>
+<p>编辑主题目录下的配置文件 <code>MyBlog/themes/matery/_config.yml</code> ，找到如下内容并修改</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>daovoice:</pre></td></tr><tr><td data-num="2"></td><td><pre>  enable: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  app_id: 4xxxxxxxe   <span class="token comment">#DaoVoice 中的 app_id</span></pre></td></tr></table></figure><h4 id="8-快捷导航页面个性化"><a class="anchor" href="#8-快捷导航页面个性化">#</a> 8. 快捷导航页面个性化</h4>
+<p>编辑文件 <code>MyBlog/source/tools/index.html</code> ，以下简单标记出几处，还有其他涉及到博客信息的内容都需要改为你自己的博客信息即可。</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/posts/20200916235833.png" alt="" /></p>
+<h4 id="9-添加友情链接"><a class="anchor" href="#9-添加友情链接">#</a> 9. 添加友情链接</h4>
+<p>编辑文件 <code>MyBlog/suorce/_data/friends.json</code> ，按如下格式添加友情</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token punctuation">[</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>        <span class="token string">"avatar"</span><span class="token builtin class-name">:</span> <span class="token string">"https://s1.ax1x.com/2020/05/17/YRWsYT.png"</span>,</pre></td></tr><tr><td data-num="4"></td><td><pre>        <span class="token string">"name"</span><span class="token builtin class-name">:</span> <span class="token string">"Luckey"</span>,</pre></td></tr><tr><td data-num="5"></td><td><pre>        <span class="token string">"introduction"</span><span class="token builtin class-name">:</span> <span class="token string">"越努力，越幸运"</span>,</pre></td></tr><tr><td data-num="6"></td><td><pre>        <span class="token string">"url"</span><span class="token builtin class-name">:</span> <span class="token string">"http://www.luckyzmj.cn"</span>,</pre></td></tr><tr><td data-num="7"></td><td><pre>        <span class="token string">"title"</span><span class="token builtin class-name">:</span> <span class="token string">"访问主页"</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token punctuation">&#125;</span>,<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>      <span class="token string">"avatar"</span><span class="token builtin class-name">:</span> <span class="token string">"https://sunhwee.com/hwsun.jpg"</span>,</pre></td></tr><tr><td data-num="10"></td><td><pre>      <span class="token string">"name"</span><span class="token builtin class-name">:</span> <span class="token string">"洪卫の博客"</span>,</pre></td></tr><tr><td data-num="11"></td><td><pre>      <span class="token string">"introduction"</span><span class="token builtin class-name">:</span> <span class="token string">"UESTC CVer"</span>,</pre></td></tr><tr><td data-num="12"></td><td><pre>      <span class="token string">"url"</span><span class="token builtin class-name">:</span> <span class="token string">"http://sunhwee.com"</span>,</pre></td></tr><tr><td data-num="13"></td><td><pre>      <span class="token string">"title"</span><span class="token builtin class-name">:</span> <span class="token string">"访问主页"</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token punctuation">]</span></pre></td></tr></table></figure><h4 id="10-添加相册"><a class="anchor" href="#10-添加相册">#</a> 10. 添加相册</h4>
+<p>比如你的图片上传图床后，链接地址如下</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/璀璨星空/01.jpg</pre></td></tr><tr><td data-num="2"></td><td><pre>https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/璀璨星空/02.jpg</pre></td></tr><tr><td data-num="3"></td><td><pre>https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫风景/01.jpg</pre></td></tr><tr><td data-num="4"></td><td><pre>https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫风景/02.jpg</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token punctuation">..</span>.</pre></td></tr></table></figure><p>首先提取出图片链接公共的部分，作为图床地址</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/</pre></td></tr></table></figure><p>然后再提取图片地址中不同的部分，作为图片地址</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>璀璨星空/01.jpg</pre></td></tr><tr><td data-num="2"></td><td><pre>璀璨星空/02.jpg</pre></td></tr><tr><td data-num="3"></td><td><pre>动漫风景/01.jpg</pre></td></tr><tr><td data-num="4"></td><td><pre>动漫风景/03.jpg</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token punctuation">..</span>.</pre></td></tr></table></figure><blockquote>
+<p>具体怎么分割根据你自己图床的链接格式而定，以上为我的 github 图床格式为例。</p>
+</blockquote>
+<p>将相册图床的地址改为你自己的图床地址，需要更改两处文件</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 例如我的图床地址为：</span></pre></td></tr><tr><td data-num="2"></td><td><pre>https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/</pre></td></tr></table></figure><p>themes/matery/layout/galleries.ejs</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/posts/20201008183019.png" alt="" /></p>
+<p>themes/matery/layout/gallerie.ejs</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/posts/20201008183219.png" alt="" /></p>
+<p>为每个相册添加链接地址，在根目录 /source/List/galleries/ 下新建 相册名称 文件夹，并在该文件夹下新建  <code>index.md</code></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/posts/20201008183808.png" alt="" /></p>
+<p>最后，在根目录 /source/_data/galleries.json 中添加图片链接，格式如下，</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token punctuation">[</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token string">"name"</span><span class="token builtin class-name">:</span> <span class="token string">"璀璨星空"</span>,</pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token string">"cover"</span><span class="token builtin class-name">:</span> <span class="token string">"璀璨星空/01.jpg"</span>,</pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token string">"description"</span><span class="token builtin class-name">:</span> <span class="token string">"璀璨星空"</span>,</pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token string">"photos"</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span></pre></td></tr><tr><td data-num="7"></td><td><pre>      <span class="token string">"璀璨星空/01.jpg"</span>,</pre></td></tr><tr><td data-num="8"></td><td><pre>      <span class="token string">"璀璨星空/02.jpg"</span>,</pre></td></tr><tr><td data-num="9"></td><td><pre>      <span class="token string">"璀璨星空/03.jpg"</span>,</pre></td></tr><tr><td data-num="10"></td><td><pre>      <span class="token string">"璀璨星空/04.jpg"</span>,</pre></td></tr><tr><td data-num="11"></td><td><pre>      <span class="token string">"璀璨星空/05.jpg"</span>,</pre></td></tr><tr><td data-num="12"></td><td><pre>      <span class="token string">"璀璨星空/06.jpg"</span>,</pre></td></tr><tr><td data-num="13"></td><td><pre>      <span class="token string">"璀璨星空/07.jpg"</span>,</pre></td></tr><tr><td data-num="14"></td><td><pre>      <span class="token string">"璀璨星空/08.jpg"</span>,</pre></td></tr><tr><td data-num="15"></td><td><pre>      <span class="token string">"璀璨星空/09.jpg"</span>,</pre></td></tr><tr><td data-num="16"></td><td><pre>      <span class="token string">"璀璨星空/10.jpg"</span>,</pre></td></tr><tr><td data-num="17"></td><td><pre>      <span class="token string">"璀璨星空/11.jpg"</span>,</pre></td></tr><tr><td data-num="18"></td><td><pre>      <span class="token string">"璀璨星空/12.jpg"</span>,</pre></td></tr><tr><td data-num="19"></td><td><pre>      <span class="token string">"璀璨星空/13.jpg"</span>,</pre></td></tr><tr><td data-num="20"></td><td><pre>      <span class="token string">"璀璨星空/14.jpg"</span>,</pre></td></tr><tr><td data-num="21"></td><td><pre>      <span class="token string">"璀璨星空/15.jpg"</span>,</pre></td></tr><tr><td data-num="22"></td><td><pre>      <span class="token string">"璀璨星空/16.jpg"</span></pre></td></tr><tr><td data-num="23"></td><td><pre>    <span class="token punctuation">]</span></pre></td></tr><tr><td data-num="24"></td><td><pre>  <span class="token punctuation">&#125;</span>,</pre></td></tr><tr><td data-num="25"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="26"></td><td><pre>    <span class="token string">"name"</span><span class="token builtin class-name">:</span> <span class="token string">"动漫风景"</span>,</pre></td></tr><tr><td data-num="27"></td><td><pre>    <span class="token string">"cover"</span><span class="token builtin class-name">:</span> <span class="token string">"动漫风景/01.jpg"</span>,</pre></td></tr><tr><td data-num="28"></td><td><pre>    <span class="token string">"description"</span><span class="token builtin class-name">:</span> <span class="token string">"动漫风景"</span>,</pre></td></tr><tr><td data-num="29"></td><td><pre>    <span class="token string">"photos"</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span></pre></td></tr><tr><td data-num="30"></td><td><pre>      <span class="token string">"动漫风景/01.jpg"</span>,</pre></td></tr><tr><td data-num="31"></td><td><pre>      <span class="token string">"动漫风景/02.jpg"</span>,</pre></td></tr><tr><td data-num="32"></td><td><pre>      <span class="token string">"动漫风景/03.jpg"</span>,</pre></td></tr><tr><td data-num="33"></td><td><pre>      <span class="token string">"动漫风景/04.jpg"</span>,</pre></td></tr><tr><td data-num="34"></td><td><pre>      <span class="token string">"动漫风景/05.jpg"</span>,</pre></td></tr><tr><td data-num="35"></td><td><pre>      <span class="token string">"动漫风景/06.jpg"</span>,</pre></td></tr><tr><td data-num="36"></td><td><pre>      <span class="token string">"动漫风景/07.jpg"</span>,</pre></td></tr><tr><td data-num="37"></td><td><pre>      <span class="token string">"动漫风景/08.jpg"</span>,</pre></td></tr><tr><td data-num="38"></td><td><pre>      <span class="token string">"动漫风景/09.jpg"</span>,</pre></td></tr><tr><td data-num="39"></td><td><pre>      <span class="token string">"动漫风景/10.jpg"</span>,</pre></td></tr><tr><td data-num="40"></td><td><pre>      <span class="token string">"动漫风景/11.jpg"</span>,</pre></td></tr><tr><td data-num="41"></td><td><pre>      <span class="token string">"动漫风景/12.jpg"</span>,</pre></td></tr><tr><td data-num="42"></td><td><pre>      <span class="token string">"动漫风景/13.jpg"</span>,</pre></td></tr><tr><td data-num="43"></td><td><pre>      <span class="token string">"动漫风景/14.jpg"</span>,</pre></td></tr><tr><td data-num="44"></td><td><pre>      <span class="token string">"动漫风景/15.jpg"</span>,</pre></td></tr><tr><td data-num="45"></td><td><pre>      <span class="token string">"动漫风景/16.jpg"</span></pre></td></tr><tr><td data-num="46"></td><td><pre>    <span class="token punctuation">]</span></pre></td></tr><tr><td data-num="47"></td><td><pre>  <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="48"></td><td><pre><span class="token punctuation">]</span></pre></td></tr></table></figure><h4 id="11-站点统计功能"><a class="anchor" href="#11-站点统计功能">#</a> 11. 站点统计功能</h4>
+<p>站点统计的数据来源于<span class="exturl" data-url="aHR0cHM6Ly90b25namkuYmFpZHUuY29tL3dlYi93ZWxjb21lL2xvZ2lu">百度统计</span>，当你的网站被百度收录后就会在百度统计中出现数据，具体效果如下：</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20210518211242.png" alt="" /></p>
+<p>由于博客的统计页面数据不能直接从百度站点中调用，因此需要自行从百度站点中将相应数据填入博客站点统计页面的源代码文件中，个人建议每隔一个月手动更新一次数据。</p>
+<p>打开 <code>MyBlog\themes\matery\layout\census.ejs</code>  文件，将百度统计中的数据填入源代码中，修改代码如下：</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20210518210629.png" alt="" /></p>
+<h4 id="11-仿windows个性化"><a class="anchor" href="#11-仿windows个性化">#</a> 11. 仿 Windows 个性化</h4>
+<p>仿 Windows 页面是采用<span class="exturl" data-url="aHR0cHM6Ly95bHVpLnl1cmkyLmNuLw=="> YLUI</span> 实现的，YLUI 提供了社区版本供大家学习使用，具体效果如下：</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20210518211817.png" alt="" /></p>
+<p>大家可以查看 YLUI 官方的<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3l1cmkycGV0ZXIveWx1aS90cmVlL21hc3Rlci9kb2N1bWVudHM=">开发文档</span>进行开发，有不懂的可以加官方的 QQ 群： <code>191372634</code>  进行讨论。</p>
+<h4 id="12-博客动漫风格背景图"><a class="anchor" href="#12-博客动漫风格背景图">#</a> 12. 博客动漫风格背景图</h4>
+<p>因为在上一个 LuckyBlog 版本发布的网站风格是偏向动漫风格的，如果大家喜欢动漫风格，只需要替换以下配置即可。</p>
+<p><strong>博客每日轮播图：</strong> 以下链接图片全部下载保存到 <code>MyBlog\themes\matery\source\medias\banner</code>  中，以 0~7.jpg 的文件名格式命名即可。</p>
+<figure class="highlight html"><figcaption data-lang="HTML"></figcaption><table><tr><td data-num="1"></td><td><pre>https://cdn.jsdelivr.net/gh/LuckyZmj/LuckyBlog@master/themes/matery/source/medias/banner/0.jpg</pre></td></tr><tr><td data-num="2"></td><td><pre>https://cdn.jsdelivr.net/gh/LuckyZmj/LuckyBlog@master/themes/matery/source/medias/banner/1.jpg</pre></td></tr><tr><td data-num="3"></td><td><pre>https://cdn.jsdelivr.net/gh/LuckyZmj/LuckyBlog@master/themes/matery/source/medias/banner/2.jpg</pre></td></tr><tr><td data-num="4"></td><td><pre>https://cdn.jsdelivr.net/gh/LuckyZmj/LuckyBlog@master/themes/matery/source/medias/banner/3.jpg</pre></td></tr><tr><td data-num="5"></td><td><pre>https://cdn.jsdelivr.net/gh/LuckyZmj/LuckyBlog@master/themes/matery/source/medias/banner/4.jpg</pre></td></tr><tr><td data-num="6"></td><td><pre>https://cdn.jsdelivr.net/gh/LuckyZmj/LuckyBlog@master/themes/matery/source/medias/banner/5.jpg</pre></td></tr><tr><td data-num="7"></td><td><pre>https://cdn.jsdelivr.net/gh/LuckyZmj/LuckyBlog@master/themes/matery/source/medias/banner/6.jpg</pre></td></tr><tr><td data-num="8"></td><td><pre>https://cdn.jsdelivr.net/gh/LuckyZmj/LuckyBlog@master/themes/matery/source/medias/banner/7.jpg</pre></td></tr></table></figure><p><strong>无文章特色背景图：</strong> 打开主题配置文件 <code>MyBlog\themes\matery\_config.yml</code> ，修改替换如下代码即可：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># The post featured images that needs to be displayed when there is no image.</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># 无文章特色图片时需要显示的文章特色图片.</span></pre></td></tr><tr><td data-num="3"></td><td><pre>featureImages: </pre></td></tr><tr><td data-num="4"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/01.jpg</pre></td></tr><tr><td data-num="5"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/02.jpg</pre></td></tr><tr><td data-num="6"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/04.jpg</pre></td></tr><tr><td data-num="7"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/06.jpg</pre></td></tr><tr><td data-num="8"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/07.jpg</pre></td></tr><tr><td data-num="9"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/10.jpg</pre></td></tr><tr><td data-num="10"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/11.jpg</pre></td></tr><tr><td data-num="11"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/12.jpg</pre></td></tr><tr><td data-num="12"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/09.jpg</pre></td></tr><tr><td data-num="13"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/14.jpg</pre></td></tr><tr><td data-num="14"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/15.jpg</pre></td></tr><tr><td data-num="15"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/16.jpg</pre></td></tr><tr><td data-num="16"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E4%BA%8C%E6%AC%A1%E5%85%83%E9%A3%8E/06.jpg</pre></td></tr><tr><td data-num="17"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/02.jpg</pre></td></tr><tr><td data-num="18"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/03.jpg</pre></td></tr><tr><td data-num="19"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/04.jpg</pre></td></tr><tr><td data-num="20"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/07.jpg</pre></td></tr><tr><td data-num="21"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/08.jpg</pre></td></tr><tr><td data-num="22"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/11.jpg</pre></td></tr><tr><td data-num="23"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/10.jpg</pre></td></tr><tr><td data-num="24"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/09.jpg</pre></td></tr><tr><td data-num="25"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/12.jpg</pre></td></tr><tr><td data-num="26"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/13.jpg</pre></td></tr><tr><td data-num="27"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/14.jpg</pre></td></tr><tr><td data-num="28"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E7%92%80%E7%92%A8%E6%98%9F%E7%A9%BA/16.jpg</pre></td></tr><tr><td data-num="29"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E7%92%80%E7%92%A8%E6%98%9F%E7%A9%BA/15.jpg</pre></td></tr><tr><td data-num="30"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E7%92%80%E7%92%A8%E6%98%9F%E7%A9%BA/11.jpg</pre></td></tr><tr><td data-num="31"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E7%92%80%E7%92%A8%E6%98%9F%E7%A9%BA/09.jpg</pre></td></tr><tr><td data-num="32"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E7%92%80%E7%92%A8%E6%98%9F%E7%A9%BA/03.jpg</pre></td></tr><tr><td data-num="33"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/08.jpg</pre></td></tr><tr><td data-num="34"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/03.jpg</pre></td></tr><tr><td data-num="35"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/13.jpg</pre></td></tr><tr><td data-num="36"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/01.jpg</pre></td></tr><tr><td data-num="37"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/05.jpg</pre></td></tr><tr><td data-num="38"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E7%92%80%E7%92%A8%E6%98%9F%E7%A9%BA/14.jpg</pre></td></tr><tr><td data-num="39"></td><td><pre>- https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/%E7%92%80%E7%92%A8%E6%98%9F%E7%A9%BA/01.jpg</pre></td></tr></table></figure><h3 id="0x04-更多内容优化"><a class="anchor" href="#0x04-更多内容优化">#</a> 0x04 更多内容优化</h3>
+<p>以上简单介绍了  <code>逸尘Blog</code>  中一些要修改的个性化地方，其他更详细的优化参考其他关于 <code>Matery</code>  的文章。以下几篇文章都是基于 <code>hexo-theme-matery</code>  主题优化的教程，大家如果遇到问题，可以参考其中的方法。</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cDovL2x1Y2t5em1qLmNuL3Bvc3RzL2UzZTA4MTA5Lmh0bWw=">个人博客搭建</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9zdW5od2VlLmNvbS9wb3N0cy82ZTg4MzllYi5odG1s">Hexo+Github 博客搭建完全教程</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JsaW5rZm94L2hleG8tdGhlbWUtbWF0ZXJ5L2Jsb2IvZGV2ZWxvcC9SRUFETUVfQ04ubWQ=">hexo-theme-matery 作者教程</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly95YWZpbmUtYmxvZy5jbi9wb3N0cy80YWIyLmh0bWw=">Hexo+github 搭建博客 (超级详细版，精细入微)</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2N1bmd1ZGFmYS9hcnRpY2xlL2RldGFpbHMvMTA2Mjc4MjA2">hexo（matery）背景、滚动条优化 + 增加点击跳评论</span></li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/hexo-blog-%E9%80%B8%E5%B0%98/" rel="tag"><i class="ic i-tag"></i> hexo-blog-逸尘</a>
+          <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" rel="tag"><i class="ic i-tag"></i> 博客搭建教程</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-08-24 16:09:44" itemprop="dateModified" datetime="2021-08-24T16:09:44+08:00">2021-08-24</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="逸尘 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="逸尘 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="逸尘 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>逸尘 <i class="ic i-at"><em>@</em></i>逸尘
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://yichenm.github.io.git/2020/06/17/BlogOpen/" title="逸尘Blog开源搭建教程">https://yichenm.github.io.git/2020/06/17/BlogOpen/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/04/20/computer-science/java/course-1/week3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclfb3vzhj20zk0m8wny.jpg" title="JavaSE基础知识点归纳总结">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 编程语言</span>
+  <h3>JavaSE基础知识点归纳总结</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2020/06/20/Hexo-xr/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipevuctzzj20zk0m84qp.jpg" title="Hexo之渲染绕过">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 博客篇</span>
+  <h3>Hexo之渲染绕过</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-blog-%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text"> 0x01 Blog 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x02-blog-%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text"> 0x02 Blog 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85git"><span class="toc-number">2.1.</span> <span class="toc-text"> 1. 安装 Git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85nodejs"><span class="toc-number">2.2.</span> <span class="toc-text"> 2. 安装 node.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%B7%BB%E5%8A%A0npm%E5%9B%BD%E5%86%85%E6%BA%90"><span class="toc-number">2.3.</span> <span class="toc-text"> 3. 添加 npm 国内源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%AE%89%E8%A3%85hexo"><span class="toc-number">2.4.</span> <span class="toc-text"> 4. 安装 Hexo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%AE%89%E8%A3%85%E9%80%B8%E5%B0%98blog"><span class="toc-number">2.5.</span> <span class="toc-text"> 5. 安装逸尘 Blog</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x03-%E9%80%B8%E5%B0%98blog-%E4%B8%AA%E6%80%A7%E5%8C%96"><span class="toc-number">3.</span> <span class="toc-text"> 0x03 逸尘 Blog 个性化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BF%AE%E6%94%B9%E9%83%A8%E7%BD%B2%E5%B9%B3%E5%8F%B0"><span class="toc-number">3.1.</span> <span class="toc-text"> 1. 修改部署平台</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BF%AE%E6%94%B9%E7%BD%91%E7%AB%99%E4%BF%A1%E6%81%AF"><span class="toc-number">3.2.</span> <span class="toc-text"> 2. 修改网站信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E5%A4%B4%E5%83%8F"><span class="toc-number">3.3.</span> <span class="toc-text"> 3. 修改博客头像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E4%BF%AE%E6%94%B9%E7%95%99%E8%A8%80%E6%9D%BF%E7%AE%80%E4%BB%8B"><span class="toc-number">3.4.</span> <span class="toc-text"> 4. 修改留言板简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E4%BF%AE%E6%94%B9%E9%9F%B3%E4%B9%90%E5%88%97%E8%A1%A8"><span class="toc-number">3.5.</span> <span class="toc-text"> 5. 修改音乐列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E7%BB%91%E5%AE%9A-valine-%E8%AF%84%E8%AE%BA"><span class="toc-number">3.6.</span> <span class="toc-text"> 6. 绑定 Valine 评论</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E7%BB%91%E5%AE%9A-daovoice-%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9"><span class="toc-number">3.7.</span> <span class="toc-text"> 7. 绑定 DaoVoice 在线聊天</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E5%BF%AB%E6%8D%B7%E5%AF%BC%E8%88%AA%E9%A1%B5%E9%9D%A2%E4%B8%AA%E6%80%A7%E5%8C%96"><span class="toc-number">3.8.</span> <span class="toc-text"> 8. 快捷导航页面个性化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5"><span class="toc-number">3.9.</span> <span class="toc-text"> 9. 添加友情链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%86%8C"><span class="toc-number">3.10.</span> <span class="toc-text"> 10. 添加相册</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-%E7%AB%99%E7%82%B9%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD"><span class="toc-number">3.11.</span> <span class="toc-text"> 11. 站点统计功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-%E4%BB%BFwindows%E4%B8%AA%E6%80%A7%E5%8C%96"><span class="toc-number">3.12.</span> <span class="toc-text"> 11. 仿 Windows 个性化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-%E5%8D%9A%E5%AE%A2%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%A0%BC%E8%83%8C%E6%99%AF%E5%9B%BE"><span class="toc-number">3.13.</span> <span class="toc-text"> 12. 博客动漫风格背景图</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x04-%E6%9B%B4%E5%A4%9A%E5%86%85%E5%AE%B9%E4%BC%98%E5%8C%96"><span class="toc-number">4.</span> <span class="toc-text"> 0x04 更多内容优化</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2020/03/15/PicGo-GitHub/" rel="bookmark" title="PicGo+GitHub 图床搭建">PicGo+GitHub 图床搭建</a></li><li class="active"><a href="/2020/06/17/BlogOpen/" rel="bookmark" title="逸尘Blog开源搭建教程">逸尘Blog开源搭建教程</a></li><li><a href="/2020/06/20/Hexo-xr/" rel="bookmark" title="Hexo之渲染绕过">Hexo之渲染绕过</a></li><li><a href="/2021/05/24/Blog/" rel="bookmark" title="个人博客搭建">个人博客搭建</a></li><li><a href="/2021/05/24/computer-science/note/Blog/" rel="bookmark" title="个人博客搭建">个人博客搭建</a></li><li><a href="/2021/08/24/blog-aliyun/" rel="bookmark" title="阿里云服务器部署Hexo博客">阿里云服务器部署Hexo博客</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="逸尘"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">逸尘</p>
+  <div class="description" itemprop="description">专注于Web,分享生活,分享知识</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">24</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">13</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">16</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;github.com&#x2F;yourname"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>链接</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>list</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/musics/" rel="section"><i class="ic i-music"></i>musics</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/movies/" rel="section"><i class="ic i-sakura"></i>movies</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/04/20/computer-science/java/course-1/week3/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2020/06/20/Hexo-xr/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Foo/" title="分类于 Foo">Foo</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Foo/Bar/" title="分类于 Bar">Bar</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Foo/Bar/Baz/" title="分类于 Baz">Baz</a>
+</div>
+
+    <span><a href="/2013/12/24/categories/" title="Categories">Categories</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" title="分类于 博客篇">博客篇</a>
+</div>
+
+    <span><a href="/2020/06/17/BlogOpen/" title="逸尘Blog开源搭建教程">逸尘Blog开源搭建教程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><span class="exturl" data-url="aHR0cDovL3d3dy5nb29nbGUuY29tLw==" title="www.google.com">www.google.com<i class="ic i-link-alt"></i></span></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" title="分类于 博客篇">博客篇</a>
+</div>
+
+    <span><a href="/2020/06/20/Hexo-xr/" title="Hexo之渲染绕过">Hexo之渲染绕过</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" title="分类于 博客篇">博客篇</a>
+</div>
+
+    <span><a href="/2021/05/24/computer-science/note/Blog/" title="个人博客搭建">个人博客搭建</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2013/12/25/excerpts/" title="Excerpts">Excerpts</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%9D%82%E8%B0%88/" title="分类于 二进制杂谈">二进制杂谈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%9D%82%E8%B0%88/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/2020/08/13/computer-science/note/theme-shoka-doc/display/" title="Step.3 界面显示">Step.3 界面显示</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%9D%82%E8%B0%88/" title="分类于 二进制杂谈">二进制杂谈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%9D%82%E8%B0%88/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/2020/08/13/computer-science/note/theme-shoka-doc/config/" title="Step.2 基本配置">Step.2 基本配置</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/Java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/Java/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6Java%E8%AF%AD%E8%A8%80/" title="分类于 零基础学Java语言-">零基础学Java语言-</a>
+</div>
+
+    <span><a href="/2020/04/12/computer-science/java/course-1/week-1/" title="第1周 计算">第1周 计算</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2013/12/25/no-title/" title="未命名">未命名</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2019 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">逸尘 @ Yi Chen</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/06/17/BlogOpen/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
