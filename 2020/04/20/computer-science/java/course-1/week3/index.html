@@ -1,0 +1,809 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="逸尘" href="https://yichenm.github.io.git/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="逸尘" href="https://yichenm.github.io.git/atom.xml" />
+<link rel="alternate" type="application/json" title="逸尘" href="https://yichenm.github.io.git/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="blog,JavaSE基础" />
+
+
+<link rel="canonical" href="https://yichenm.github.io.git/2020/04/20/computer-science/java/course-1/week3/">
+
+
+<meta name="description" content="# JavaSE 基础  # 一丶继承    面向对象编程中，继承是一个比较重要的概念，继承描述的是事物之间的所属关系，是从已有的类中构建出新的类，已有的类称为父类，新的类称为子类，子类具有父类的数据属性和方法，并能扩展新的属性和方法（不能继承私有）。  &lt;p align&#x3D;&quot;left&quot;&gt;1、继承的使用  格式：使用 extends 关键字 &#x3D;&#x3D;&gt; class">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaSE基础知识点归纳总结">
+<meta property="og:url" content="https://yichenm.github.io.git/2020/04/20/computer-science/java/course-1/week3/index.html">
+<meta property="og:site_name" content="逸尘">
+<meta property="og:description" content="# JavaSE 基础  # 一丶继承    面向对象编程中，继承是一个比较重要的概念，继承描述的是事物之间的所属关系，是从已有的类中构建出新的类，已有的类称为父类，新的类称为子类，子类具有父类的数据属性和方法，并能扩展新的属性和方法（不能继承私有）。  &lt;p align&#x3D;&quot;left&quot;&gt;1、继承的使用  格式：使用 extends 关键字 &#x3D;&#x3D;&gt; class">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-20T08:33:51.000Z">
+<meta property="article:modified_time" content="2021-08-24T04:25:18.844Z">
+<meta property="article:author" content="逸尘">
+<meta property="article:tag" content="blog">
+<meta property="article:tag" content="JavaSE基础">
+<meta name="twitter:card" content="summary">
+
+
+  <title>
+JavaSE基础知识点归纳总结 - 编程语言 - JavaSE篇 |
+Yi Chen = 逸尘 = 逸尘の博客</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">JavaSE基础知识点归纳总结
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-04-20 16:33:51">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-04-20T16:33:51+08:00">2020-04-20</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yi Chen</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4wqtg4j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/JavaSE%E7%AF%87/" itemprop="item" rel="index" title="分类于 JavaSE篇"><span itemprop="name">JavaSE篇</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/JavaSE%E7%AF%87/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" itemprop="item" rel="index" title="分类于 编程语言"><span itemprop="name">编程语言</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://yichenm.github.io.git/2020/04/20/computer-science/java/course-1/week3/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="逸尘">
+    <meta itemprop="description" content="逸尘の博客, 专注于Web,分享生活,分享知识">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="逸尘">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="javase基础"><a class="anchor" href="#javase基础">#</a> JavaSE 基础</h1>
+<hr />
+<h2 id="一丶继承"><a class="anchor" href="#一丶继承">#</a> 一丶继承</h2>
+<p>   面向对象编程中，继承是一个比较重要的概念，继承描述的是事物之间的所属关系，是从已有的类中构建出新的类，已有的类称为父类，新的类称为子类，子类具有父类的数据属性和方法，并能扩展新的属性和方法（不能继承私有）。</p>
+<hr />
+<p>&lt;p align=&quot;left&quot;&gt;1、继承的使用</p>
+<p> 格式：使用 extends 关键字 ==&gt; class 子类 extends 父类 ()</p>
+<p css-module="."> 创建： Person 类和 Student 子类：public class Student extends Person</p>
+<p>2、继承的优点</p>
+<p> 提高了代码的复用性，提高了软件的开发效效率；<br />
+ 让类与类之间产生了联系，提供了多态的前提；</p>
+<p>3、继承的特点</p>
+<p> 在 Java 中，只支持单继承，不支持多继承，一个子类只能有一个直接父类；<br />
+ 父类私有成员，子类不能继承，因为根本看不到；<br />
+ 一个父类可以有多个子类；<br />
+ 支持多层继承，一个类的父类可以再去继承另外的父类；<br />
+ 子类和父类是相对的概念，一个类是某个类父类的同时，也可以是另一个类的子类。</p>
+<p>4、继承中成员变量关系</p>
+<p> 不同变量名子类直接调用；<br />
+ 相同变量名调用时，如果子类有，就不调用父类的变量，如果子类没有，父类有，则调用父类的；<br />
+ 在子类中，要调用父类的成员，使用关键字 super，调用父类方法也是一样，使用 super 关键字。<br />
+&lt;/p&gt;</p>
+<hr />
+<p>二丶代码实例<br />
+先创建 Person.java 父类</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">package</span> <span class="token namespace">myExtends</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>   </pre></td></tr><tr><td data-num="3"></td><td><pre> </pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token class-name">String</span> name<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token keyword">int</span> age<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre> </pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="17"></td><td><pre>    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="18"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>        <span class="token keyword">return</span> name<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="22"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>        <span class="token keyword">return</span> age<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="24"></td><td><pre>   <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="25"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>再创建 Studen.java 子类</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">package</span> <span class="token namespace">myExtends</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre> </pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment">/**</pre></td></tr><tr><td data-num="4"></td><td><pre> * 使用 extends 关键字创建子类并新定义了 number 变量，定义 i 进行继承中成员变量的关系进行测试</pre></td></tr><tr><td data-num="5"></td><td><pre> */</span> </pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token keyword">extends</span> <span class="token class-name">Person</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token keyword">int</span> number<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre> </pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token keyword">int</span> number<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>        <span class="token keyword">this</span><span class="token punctuation">.</span>number <span class="token operator">=</span> number<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    <span class="token comment">// 在子类中能直接使用父类的非私有成员变量</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">message</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="17"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="18"></td><td><pre>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"My name is "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">",I am "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">+</span> <span class="token string">" years old,"</span> <span class="token operator">+</span> <span class="token string">" my number is "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="21"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="22"></td><td><pre>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">super</span><span class="token punctuation">.</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// 在子类中，要调用父类的成员，使用关键字 super</span></pre></td></tr><tr><td data-num="24"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="25"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><hr />
+<p>在 Main.java 中赋值并调用</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">package</span> <span class="token namespace">myExtends</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre> </pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>        <span class="token class-name">Student</span> stu <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>        stu<span class="token punctuation">.</span><span class="token function">setAge</span><span class="token punctuation">(</span><span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>        stu<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"java"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>        stu<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>        stu<span class="token punctuation">.</span><span class="token function">message</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        stu<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>stu<span class="token punctuation">.</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// 子类有则调用子类的，子类没有则调用父类的</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>实例分析：</p>
+<p>&lt;ul&gt;<br />
+&lt;li&gt; 在父类 Person 中定义了非私有变量 name、age 和测试变量 i，子类 Student 中新创建了 number 变量并在子类中能够使用父类中的变量 &lt;/li&gt;<br />
+&lt;li&gt; 在父类和子类中都有 i 变量，调用时，如果子类有，就不调用父类的变量，如果子类没有，父类有，则调用父类的 &lt;/li&gt;<br />
+&lt;li&gt; 在子类中，要调用父类的成员，使用关键字 super，调用父类方法也是一样，使用 super 关键字 &lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<hr />
+<h2 id="二丶抽象"><a class="anchor" href="#二丶抽象">#</a> 二丶抽象</h2>
+<p>  当父类知道子类应该包含什么样的方法，但无法确定子类如何实现这些方法；在分析事物时，会发现事物的共性，将共性抽取出，实现的时候，就会有这样的情况：方法功能声明相同，但方法功能主体不同，这时，将方法声明抽取出，那么，此方法就是一个抽象方法。</p>
+<hr />
+<p>1. 抽象的定义格式<br />
+ &lt;ul&gt;<br />
+&lt;li&gt; 抽象方法的定义格式：public abstract 返回值类型 方法名（参数）；&lt;/li&gt;<br />
+&lt;li&gt; 抽象类的定义格式：abstract class 类名 {}&lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<p>2. 抽象的特点<br />
+ &lt;ul&gt;<br />
+&lt;li&gt; 抽象类和抽象方法都需要被 abstract 修饰，抽象方法一定要定义在抽象类中 &lt;/li&gt;<br />
+&lt;li&gt; 抽象不能直接创建对象，因为调用抽象方法没有意义 &lt;/li&gt;<br />
+&lt;li&gt; 只有覆盖了抽象类中所有的抽象方法后，其子类才可以创建对象，否则该子类还是一个抽象类 &lt;/li&gt;<br />
+&lt;li&gt; 之所以继承抽象类，更多的是在思想，是面对共性类型操作会更简单 &lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<p>3. 抽象的注意事项<br />
+ &lt;ul&gt;<br />
+&lt;li&gt; 抽象类一定是个父类，因为是不断抽取而来的 &lt;/li&gt;<br />
+&lt;li&gt; 抽象类中可以不定义抽象方法，其存在的意义就是不让该类创建对象，方法可以直接让子类去使用 &lt;/li&gt;<br />
+&lt;li&gt; 抽象关键字 abstract 不可以和以下关键字共存：<br />
+private：私有的方法子类是无法继承到的，也不存在覆盖，如果 abstract 和 private 一起使用修饰方法， abstract 既要子类去实现这个方法，而 private 修饰子类根本无法得到父类这个方法，互相矛盾<br />
+ final：final 修饰的类不能被继承，而抽象类一定是父类<br />
+ static：static 修饰的表示静态的，不能被修改的，但可以直接被类所调用，而 abstract 修饰的是抽象的，即没有方法实体，也不能直接被调用 &lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<hr />
+<p>代码实例：</p>
+<p>&lt;ul&gt;<br />
+&lt;li&gt; 先创建 Develop.java 父类，创建 Develop 抽象类，并创建抽象方法 &lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">package</span> <span class="token class-name">MyAbstract</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre> </pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment">/**</pre></td></tr><tr><td data-num="4"></td><td><pre> * 定义开发人员类，所有开发人员都具有工作的共性，</pre></td></tr><tr><td data-num="5"></td><td><pre> * 对工作共性进行抽取，然后形成一个 Develop 类</pre></td></tr><tr><td data-num="6"></td><td><pre> * 定义方法：工作</pre></td></tr><tr><td data-num="7"></td><td><pre> * 抽象类不能实例化对象，即不能 new，抽象方法没有主体，不能运行</pre></td></tr><tr><td data-num="8"></td><td><pre> * 抽象类的使用：可以定义类继承抽象类，将抽象方法进行重写，创建子类的对象</pre></td></tr><tr><td data-num="9"></td><td><pre> */</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Develop</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token comment">// 定义工作方法，但具体怎么工作，并不明白，所以干脆不说，即抽象方法</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token comment">// 必须使用 abstract 关键字修饰</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token comment">// 抽象的方法必须存在抽象类中，类也必须使用 abstract 关键字修饰</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>&lt;ul&gt;<br />
+&lt;li&gt; 再创建 Php.java 子类，重写父类的抽象方法 &lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">package</span> <span class="token class-name">MyAbstract</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre> </pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment">/**</pre></td></tr><tr><td data-num="4"></td><td><pre> * 定义 PHP 开发人员</pre></td></tr><tr><td data-num="5"></td><td><pre> * 继承抽象类 Develop，重写抽象的方法</pre></td></tr><tr><td data-num="6"></td><td><pre> */</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Php</span> <span class="token keyword">extends</span> <span class="token class-name">Develop</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token comment">// 重写父类的抽象方法，去掉 abstract 关键字，加上方法主体</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"正在开发网页！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>&lt;ul&gt;<br />
+&lt;li&gt; 在 Main.java 中调用 &lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">package</span> <span class="token class-name">MyAbstract</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre> </pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>        <span class="token class-name">Php</span> ph <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Php</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>        ph<span class="token punctuation">.</span><span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>实例解析<br />
+ &lt;ul&gt;<br />
+&lt;li&gt; 将共性 “研发人员” 抽取出来形成一个 Develop 类并定义方法：工作 &lt;/li&gt;<br />
+&lt;li&gt; 抽象类不能实例化，即不能 new 抽象方法没有主体 &lt;/li&gt;<br />
+&lt;li&gt; 可以定义类来继承抽象类，将抽象类进行重写，然后创建子类的对象 &lt;/li&gt;<br />
+&lt;li&gt; 重写父类的抽象方法时，去掉 abstract 关键字，加上方法主体 &lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<hr />
+<h2 id="三丶接口"><a class="anchor" href="#三丶接口">#</a> 三丶接口</h2>
+<p> 接口表示的是功能的集合，可看做是一种数据类型，接口中全是抽象方法，没有普通方法，是比抽象更抽象的 “类”，接口只描述应该具备的方法，并没有具体实现，具体的实现由接口的实现类（相当于接口的子类）来完成。这样将功能的定义与实现分离，优化了程序设计，解决了继承带来的耦合性，是一种只包含了功能声明的特殊类。</p>
+<hr />
+<p>1. 接口的定义<br />
+ &lt;ul&gt;<br />
+&lt;li&gt; 与定义类的 class 不同，使用 interface 关键字定义接口 &lt;/li&gt;<br />
+&lt;li&gt; 定义格式：<br />
+public interface 接口名 {<br />
+抽象方法 1；<br />
+抽象方法 2；<br />
+抽象方法 3；<br />
+}&lt;/li&gt;<br />
+&lt;li&gt; 使用 interface 代替了原来的 class，其他步骤与定义类相同 &lt;/li&gt;<br />
+&lt;/ul&gt;<br />
+ 逻辑实例：</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">interface</span> myInterface<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token comment">// 在接口中定义抽象方法，使用 public abstract 固定修饰，可省略 public（默认 public）</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">fun1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">fun2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">fun3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><hr />
+<p>2. 类实现接口<br />
+ &lt;ul&gt;<br />
+&lt;li&gt; 类与接口的关系为实现关系，即类实现接口，实现的动作类似继承，只是关键字不同，实现使用 implements &lt;/li&gt;<br />
+&lt;li&gt; 其他类（实现类）实现接口后，相当于声明：“我应该具备这个接口中的”。实现类仍然需要重写方法实现具体的功能 &lt;/li&gt;<br />
+&lt;li&gt; 格式：<br />
+class 类 implements 接口 {<br />
+重写接口中方法<br />
+}&lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<p>逻辑实例：</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> myInterfaceImpl <span class="token keyword">implements</span> myInterface<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token comment">// 重写接口抽象方法</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">fun1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">fun2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">fun3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><hr />
+<p>3. 接口特点<br />
+ &lt;ul&gt;<br />
+&lt;li&gt; 在类实现接口后，该类就会将接口中的抽象方法继承过来，此时该类需要重写该抽象方法，完成具体的逻辑 &lt;/li&gt;<br />
+&lt;li&gt; 接口中定义功能，当需要有该功能时，可以让类实现该接口，接口只声明了应该具备的方法，是功能的声明 &lt;/li&gt;<br />
+&lt;li&gt; 在具体实现类中重写方法，实现功能，是方法的具体实现 &lt;/li&gt;<br />
+&lt;li&gt; 通过类实现接口将功能的声明与实现分离开来 &lt;/li&gt;<br />
+&lt;li&gt; 接口中的方法均为公共访问的抽象方法 &lt;/li&gt;<br />
+&lt;li&gt; 接口中无法定义普通的成员变量 &lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<hr />
+<p>4. 接口中成员的特点<br />
+ &lt;ul&gt;<br />
+&lt;li&gt; 接口中可以定义变量，但是变量必须有固定的修饰符修饰，public static final  接口中的变量也称之为常量，其值不能改变，接口中的变量默认有 public static final 修饰符<br />
+ eg：public static final int NUM = 1；        //NUM 的值不能改变 &lt;/li&gt;<br />
+&lt;li&gt; 接口中可以定义方法，方法也有固定的修饰符：public abstract<br />
+eg：public abstract void fun();&lt;/li&gt;<br />
+&lt;li&gt; 接口不可以创建对象 &lt;/li&gt;<br />
+&lt;li&gt; 子类必须覆盖掉接口中所有的抽象方法后，子类才可以实例化，否则子类还是一个抽象类 &lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<hr />
+<p>5. 接口的多实现<br />
+ Java 是不支持多继承的，因为当多个父类有相同的功能时，子类调用会产生不确定性，其核心原因就是在多继承父类中功能有主体，而导致调用运行时不确定运行哪个主体内容，采用接口的多实现很好的解决了这个问题，因为接口中没有方法体，由子类来明确。</p>
+<p>逻辑实例：</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">interface</span> <span class="token class-name">Fu1</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">void</span> <span class="token function">show1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">interface</span> <span class="token class-name">Fu2</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token keyword">void</span> <span class="token function">show2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">Zi</span> <span class="token keyword">implements</span> <span class="token class-name">Fu1</span><span class="token punctuation">,</span><span class="token class-name">Fu2</span>    <span class="token comment">// 采用多实现，同时实现多个接口（Java 中不支持多继承）</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">show1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">show2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><hr />
+<p>6. 接口的多继承<br />
+ &lt;ul&gt;<br />
+&lt;li&gt; 类和类之间通过继承产生关系，接口和类之间通过实现产生关系，而接口和接口之间也是通过继承产生关系。多个接口之间使用 extends 进行继承。&lt;/li&gt;<br />
+&lt;li&gt; 在 Java 中是不支持多继承的，但接口可以多继承，其核心原因和接口的多实现一样 &lt;/li&gt;<br />
+&lt;/ul&gt;<br />
+ 逻辑实例：</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">interface</span> <span class="token class-name">Fu1</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">void</span> <span class="token function">show1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">interface</span> <span class="token class-name">Fu2</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token keyword">void</span> <span class="token function">show2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token keyword">interface</span> <span class="token class-name">Zi</span> <span class="token keyword">extends</span> <span class="token class-name">Fu1</span><span class="token punctuation">,</span><span class="token class-name">Fu2</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token keyword">void</span> <span class="token function">show3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><hr />
+<p>7. 类继承类同时实现接口<br />
+子类通过继承父类拓展功能，如果子类想要继续拓展其他类中的功能，可以通过接口来完成。</p>
+<p>逻辑实例：</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">class</span> FU    <span class="token comment">// 定义类</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">interface</span> <span class="token class-name">Inter</span>    <span class="token comment">// 定义接口</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">show1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">Zi</span> <span class="token keyword">extends</span> <span class="token class-name">Fu</span> <span class="token keyword">implements</span> <span class="token class-name">Inter</span>    <span class="token comment">// 继承类同时实现接口</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">show1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><hr />
+<p>8. 接口的思想<br />
+ &lt;ul&gt;<br />
+&lt;li&gt; 接口的出现拓展了功能 &lt;/li&gt;<br />
+&lt;li&gt; 接口其实就是暴露出来的规则 &lt;/li&gt;<br />
+&lt;li&gt; 接口的出现降低的耦合性 &lt;/li&gt;<br />
+&lt;li&gt; 接口的出现方便后期的维护 &lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<hr />
+<p>9. 接口和抽象对比<br />
+ &lt;font color=&quot;#dd0000&quot;&gt;<br />
+ 接口和抽象的相同点：<br />
+&lt;ul&gt;<br />
+&lt;li&gt; 都位于继承的顶端，用于被其他类实现或继承 &lt;/li&gt;<br />
+&lt;li&gt; 都不能直接实例化对象 &lt;/li&gt;<br />
+&lt;/ul&gt;<br />
+ 接口和抽象的区别：<br />
+&lt;ul&gt;<br />
+&lt;li&gt; 抽象类为部分方法提供实现，避免子类重复使用这些方法，提高代码重用性；接口只能包含抽象方法 &lt;/li&gt;<br />
+&lt;li&gt; 一个类只能继承一个直接父类（可能是抽象类），但可以实现多个接口（接口弥补了 Java 的单继承）&lt;/li&gt;<br />
+&lt;li&gt; 抽象类是这个事物中应该具备的内容 &lt;/li&gt;<br />
+&lt;li&gt; 接口是这个事物中额外的内容 &lt;/li&gt;<br />
+&lt;li&gt; 接口的实现类必须全部重写父类的抽象方法 &lt;/li&gt;<br />
+&lt;li&gt; 抽象类可以不用全部重写父类的方法：&lt;/li&gt;<br />
+&lt;li&gt; 一个抽象类的子类可以是没有抽象方法的实体类，也可以是有抽象方法的抽象类，对于实体类就是全部覆盖了父类的抽象方法，抽象类则是在父类的基础上继续抽象，可以有更多的抽象方法，让子类实现的选择就更多 &lt;/li&gt;<br />
+&lt;li&gt; 抽象类可以没有抽象方法，这样就和其他类没有区别，只是不能实例化 &lt;/li&gt;</p>
+<p>&lt;/ul&gt;<br />
+ 二者的选用：<br />
+&lt;ul&gt;<br />
+&lt;li&gt; 优先选用接口，尽量少用抽象类 &lt;/li&gt;<br />
+&lt;li&gt; 需要定义子类的行为，又要为子类提供共性功能时才选用抽象类 &lt;/li&gt;<br />
+&lt;/ul&gt;<br />
+&lt;/font&gt;&lt;br /&gt;</p>
+<hr />
+<h2 id="四丶多态"><a class="anchor" href="#四丶多态">#</a> 四丶多态</h2>
+<p> 1、概述：多态就是描述一个事物的多种形态，如小明是一个学生，他既是人，也是学生，出现两种形态。Java 中多态的代码体现在一个子类对象 (实现类对象) 既可以给这个子类 (实现类对象) 引用变量赋值，又可以给这个子类 (实现类对象) 的父类 (接口) 变量赋值。</p>
+<hr />
+<p>2、多态的定义与使用格式<br />
+父类的引用变量指向子类对象：&lt;font color=&quot;#dd0000&quot;&gt; 父类类型 变量名 = new 子类类型（）；<br />
+变量名。方法名（）；&lt;/font&gt;&lt;br /&gt;</p>
+<p>&lt;ul&gt;<br />
+&lt;li&gt; 普通类多台定义格式：父类 变量名 = new 子类（）；&lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">Fu</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>    <span class="token comment">// 创建父类</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">Zi</span> <span class="token keyword">extends</span> <span class="token class-name">Fu</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>    <span class="token comment">// 创建子类</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token class-name">Fu</span> f <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">new</span> <span class="token class-name">Zi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 类的多态使用</span></pre></td></tr></table></figure><p>&lt;ul&gt;<br />
+&lt;li&gt; 抽象类定义多态格式： 抽象名 变量名 = new 抽象子类（）；&lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">// 创建抽象父类</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Fu</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token comment">// 创建子类重写父类抽象方法</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">Zi</span> <span class="token keyword">extends</span> <span class="token class-name">Fu</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"重写父类抽象方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token comment">// 抽象类的多态使用</span></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token class-name">Fu</span> f <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Zi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><p>&lt;ul&gt;<br />
+&lt;li&gt; 接口多态定义的格式：接口 变量名 = new 接口实现类（）；&lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">// 创建接口</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">interface</span> <span class="token class-name">Fu</span> </pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token comment">// 创建实现类</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">Zi</span> <span class="token keyword">implements</span> <span class="token class-name">Fu</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"重写接口抽象方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token comment">// 接口的多态使用</span></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token class-name">Fu</span> f <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Zi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><hr />
+<p>3、多态的特点<br />
+ &lt;ul&gt;<br />
+&lt;li&gt; 必须有父子类关系或类实现接口关系，否则无法完成多态。&lt;/li&gt;<br />
+&lt;li&gt; 必须重写父类或接口类方法。&lt;/li&gt;<br />
+&lt;li&gt; 父类引用变量指向子类对象。&lt;/li&gt;<br />
+&lt;li&gt; 父类引用变量调用方法时，会调用子类重写后的方法。&lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<hr />
+<p>4、多态成员的特点<br />
+ &lt;ul&gt;<br />
+&lt;li&gt; 成员变量在编译时，参考的是引用类型所属的类（父类）中是否有被调用的成员变量。没有则编译失败。&lt;/li&gt;<br />
+&lt;li&gt; 成员变量在运行时，参考的也是引用类型所属的类（父类）中是否有被调用的成员变量。没有则运行失败。&lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<ul>
+<li>&lt;font color=&quot;#dd0000&quot;&gt; 即：编译和运行都是看等号的左边（父类）&lt;/font&gt;&lt;br /&gt;<br />
+&lt;ul&gt;<br />
+&lt;li&gt; 成员方法编译时，参考引用变量所属的类（父类），如果类中没有调用的方法，编译失败。&lt;/li&gt;<br />
+&lt;li&gt; 成员方法运行时，参考引用变量所指的对象所属的类（子类），并运行对象所属类中的方法。&lt;/li&gt;<br />
+&lt;/ul&gt;<br />
+&lt;font color=&quot;#dd0000&quot;&gt; 即：编译看左边（父类），运行看右边（子类）&lt;/font&gt;&lt;br /&gt;<br />
+ 逻辑实例：</li>
+</ul>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">// 创建父类</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Fu</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>   <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>    <span class="token comment">// 定义成员变量</span></pre></td></tr><tr><td data-num="4"></td><td><pre>   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token comment">// 定义成员方法</span></pre></td></tr><tr><td data-num="5"></td><td><pre>   <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>       <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"父类"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>   <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token comment">// 创建子类</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Zi</span> <span class="token keyword">extends</span> <span class="token class-name">Fu</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>   <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="13"></td><td><pre>   <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>       <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"子类"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>   <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token comment">//main 中调用</span></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>   <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="20"></td><td><pre>   <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>       <span class="token class-name">Fu</span> f <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Zi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="22"></td><td><pre>       <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// 成员变量编译和运行都是参考父类的</span></pre></td></tr><tr><td data-num="23"></td><td><pre>       f<span class="token punctuation">.</span><span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// 成员方法编译参考父类，运行参考子类</span></pre></td></tr><tr><td data-num="24"></td><td><pre>   <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="25"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><hr />
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token number">1</span></pre></td></tr><tr><td data-num="2"></td><td><pre>子类</pre></td></tr></table></figure><hr />
+<p>5、instanceof 关键字<br />
+ &lt;ul&gt;<br />
+&lt;li&gt; 作用：instanceof 关键字用来判断某个对象是否属于某种数据类型。&lt;/li&gt;<br />
+&lt;li&gt; 格式：boolean b = 对象 数据类型；&lt;/li&gt;<br />
+&lt;/ul&gt;</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">// 两个子类，使用两次多态调用</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token class-name">Animal</span> a1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Cat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token class-name">Animal</span> a2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">boolean</span> flag <span class="token operator">=</span> a1 <span class="token keyword">instanceof</span> <span class="token class-name">Cat</span><span class="token punctuation">;</span>    <span class="token comment">//flag 结果为 true</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">boolean</span> flag2 <span class="token operator">=</span> a2 <span class="token keyword">instanceof</span> <span class="token class-name">Cat</span><span class="token punctuation">;</span>    <span class="token comment">//flag2 结果为 false</span></pre></td></tr></table></figure><hr />
+<p>6、多态转型<br />
+ &lt;ul&gt;<br />
+&lt;li&gt; 当子类对象赋值给一个父类引用时，即向上转型（多态本身就是向上转型的过程）&lt;/li&gt;<br />
+&lt;li&gt; 格式：父类类型 变量名 = new 子类类型（）；<br />
+eg：Fu f = new Zi();&lt;/li&gt;<br />
+&lt;/ul&gt;<br />
+ 向下转型<br />
+ &lt;ul&gt;<br />
+&lt;li&gt; 通过强制类型转换格式，将父类引用转为子类格式。&lt;/li&gt;<br />
+&lt;li&gt; 格式：子类类型 变量名 = （子类类型）父类类型的变量；<br />
+eg：Zi z = (Zi) f;    // 变量 f 实际上是指向 Zi 对象 &lt;/li&gt;<br />
+&lt;/ul&gt;<br />
+7、多态的优缺点<br />
+优点：<br />
+&lt;ul&gt;<br />
+&lt;li&gt; 提高了代码的维护性（由继承保证）&lt;/li&gt;<br />
+&lt;li&gt; 提高代码复用性（有继承保证）&lt;/li&gt;<br />
+&lt;li&gt; 提高了代码的扩展性：新增加的子类不影响已存在类的多态性、继承性以及其他特性。&lt;/li&gt;<br />
+&lt;li&gt; 安全性：向上转型将子类类型隐藏了起来。&lt;/li&gt;<br />
+&lt;/ul&gt;<br />
+ 缺点：<br />
+&lt;ul&gt;<br />
+&lt;li&gt; 只能使用父类共性的内容，无法使用子类特有的功能（如要使用就要使用向下转型强制类型转换）&lt;/li&gt;</p>
+<h2 id="ul"><a class="anchor" href="#ul">#</a> &lt;/ul&gt;</h2>
+
+      <div class="tags">
+          <a href="/tags/blog/" rel="tag"><i class="ic i-tag"></i> blog</a>
+          <a href="/tags/JavaSE%E5%9F%BA%E7%A1%80/" rel="tag"><i class="ic i-tag"></i> JavaSE基础</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-08-24 12:25:18" itemprop="dateModified" datetime="2021-08-24T12:25:18+08:00">2021-08-24</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="逸尘 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="逸尘 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="逸尘 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>逸尘 <i class="ic i-at"><em>@</em></i>逸尘
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://yichenm.github.io.git/2020/04/20/computer-science/java/course-1/week3/" title="JavaSE基础知识点归纳总结">https://yichenm.github.io.git/2020/04/20/computer-science/java/course-1/week3/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/04/13/computer-science/java/course-1/week-2/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhnx9glj20zk0m8npd.jpg" title="第2周 判断">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 零基础学Java语言-浙江大学-翁恺</span>
+  <h3>第2周 判断</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2020/08/13/computer-science/note/theme-shoka-doc/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicis3attqj20zk0m8k7l.jpg" title="Hexo主题Shoka &amp; multi-markdown-it渲染器使用说明">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Theme Shoka Documentation</span>
+  <h3>Hexo主题Shoka & multi-markdown-it渲染器使用说明</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#javase%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text"> JavaSE 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%B8%B6%E7%BB%A7%E6%89%BF"><span class="toc-number">1.1.</span> <span class="toc-text"> 一丶继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E4%B8%B6%E6%8A%BD%E8%B1%A1"><span class="toc-number">1.2.</span> <span class="toc-text"> 二丶抽象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E4%B8%B6%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.3.</span> <span class="toc-text"> 三丶接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E4%B8%B6%E5%A4%9A%E6%80%81"><span class="toc-number">1.4.</span> <span class="toc-text"> 四丶多态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ul"><span class="toc-number">1.5.</span> <span class="toc-text"> &lt;&#x2F;ul&gt;</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2020/04/20/computer-science/java/course-1/week3/" rel="bookmark" title="JavaSE基础知识点归纳总结">JavaSE基础知识点归纳总结</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="逸尘"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">逸尘</p>
+  <div class="description" itemprop="description">专注于Web,分享生活,分享知识</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">18</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">12</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">7</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;github.com&#x2F;yourname"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>链接</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/04/13/computer-science/java/course-1/week-2/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2020/08/13/computer-science/note/theme-shoka-doc/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%9D%82%E8%B0%88/" title="分类于 二进制杂谈">二进制杂谈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%9D%82%E8%B0%88/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/2020/08/13/computer-science/note/theme-shoka-doc/" title="Hexo主题Shoka &amp; multi-markdown-it渲染器使用说明">Hexo主题Shoka & multi-markdown-it渲染器使用说明</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/Java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/Java/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6Java%E8%AF%AD%E8%A8%80/" title="分类于 零基础学Java语言-">零基础学Java语言-</a>
+</div>
+
+    <span><a href="/2020/04/12/computer-science/java/course-1/week-1/" title="第1周 计算">第1周 计算</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Foo/" title="分类于 Foo">Foo</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Foo/Bar/" title="分类于 Bar">Bar</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Foo/Bar/Baz/" title="分类于 Baz">Baz</a>
+</div>
+
+    <span><a href="/2013/12/24/categories/" title="Categories">Categories</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2013/12/24/elements/" title="Elements">Elements</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2018/07/24/markdown/" title="Markdown Style test">Markdown Style test</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2013/12/25/no-title/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" title="分类于 博客篇">博客篇</a>
+</div>
+
+    <span><a href="/2021/05/24/computer-science/note/Blog/" title="个人博客搭建">个人博客搭建</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2019/07/25/code-highlight/" title="Code Highlight Style test">Code Highlight Style test</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2013/12/25/excerpts/" title="Excerpts">Excerpts</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%9D%82%E8%B0%88/" title="分类于 二进制杂谈">二进制杂谈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%9D%82%E8%B0%88/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/2020/08/13/computer-science/note/theme-shoka-doc/display/" title="Step.3 界面显示">Step.3 界面显示</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2019 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">逸尘 @ Yi Chen</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/04/20/computer-science/java/course-1/week3/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
