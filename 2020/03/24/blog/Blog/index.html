@@ -1,0 +1,957 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="逸尘" href="https://yichenm.github.io.git/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="逸尘" href="https://yichenm.github.io.git/atom.xml" />
+<link rel="alternate" type="application/json" title="逸尘" href="https://yichenm.github.io.git/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="Hexo,博客,Github" />
+
+
+<link rel="canonical" href="https://yichenm.github.io.git/2020/03/24/blog/Blog/">
+
+
+<meta name="description" content="# 0x001 效果演示   演示：[ https:&#x2F;&#x2F;yichenm.github.io&#x2F; ]  # 0x002 简单介绍    前前后后大概花了两周多的时间，目前个人博客已经完善的差不多了，现在写个文章做个阶段总结，后续如果有更新的地方，会及时补充。本博客基于 Hexo 框架，采用 hexo-theme-matery 主题，在这里非常感谢作者 洪卫 的 hexo-blog-fly 博客开源，极">
+<meta property="og:type" content="article">
+<meta property="og:title" content="个人博客搭建">
+<meta property="og:url" content="https://yichenm.github.io.git/2020/03/24/blog/Blog/index.html">
+<meta property="og:site_name" content="逸尘">
+<meta property="og:description" content="# 0x001 效果演示   演示：[ https:&#x2F;&#x2F;yichenm.github.io&#x2F; ]  # 0x002 简单介绍    前前后后大概花了两周多的时间，目前个人博客已经完善的差不多了，现在写个文章做个阶段总结，后续如果有更新的地方，会及时补充。本博客基于 Hexo 框架，采用 hexo-theme-matery 主题，在这里非常感谢作者 洪卫 的 hexo-blog-fly 博客开源，极">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/12/8VdlGD.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/12/8VwrtK.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/12/8VdoQJ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/12/8Vwnyj.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/12/8VwItf.png">
+<meta property="article:published_time" content="2020-03-24T03:41:03.000Z">
+<meta property="article:modified_time" content="2021-08-26T11:20:47.434Z">
+<meta property="article:author" content="逸尘">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="博客">
+<meta property="article:tag" content="Github">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/03/12/8VdlGD.png">
+
+
+  <title>
+个人博客搭建 - 博客篇 |
+Yi Chen = 逸尘 = 逸尘の博客</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">个人博客搭建
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-03-24 11:41:03">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-03-24T11:41:03+08:00">2020-03-24</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yi Chen</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipex2cdtbj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicljitigmj20zk0m87fp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/blog/" itemprop="item" rel="index" title="分类于 博客篇"><span itemprop="name">博客篇</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://yichenm.github.io.git/2020/03/24/blog/Blog/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="逸尘">
+    <meta itemprop="description" content="逸尘の博客, 专注于编程,分享生活,分享知识">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="逸尘">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="0x001-效果演示"><a class="anchor" href="#0x001-效果演示">#</a> 0x001 效果演示</h2>
+<hr />
+<ul>
+<li>演示：[ <span class="exturl" data-url="aHR0cHM6Ly95aWNoZW5tLmdpdGh1Yi5pby8=">https://yichenm.github.io/</span> ]</li>
+</ul>
+<h2 id="0x002-简单介绍"><a class="anchor" href="#0x002-简单介绍">#</a> 0x002 简单介绍</h2>
+<hr />
+<p>  前前后后大概花了两周多的时间，目前个人博客已经完善的差不多了，现在写个文章做个阶段总结，后续如果有更新的地方，会及时补充。本博客基于 Hexo 框架，采用<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JsaW5rZm94L2hleG8tdGhlbWUtbWF0ZXJ5L2Jsb2IvZGV2ZWxvcC9SRUFETUVfQ04ubWQ="> hexo-theme-matery</span> 主题，在这里非常感谢作者 <code>洪卫</code> 的<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NodzIwMTgvaGV4by1ibG9nLWZseS5naXQ="> hexo-blog-fly</span> 博客开源，极大简化了构建博客的工作量和复杂度。在此开源博客的基础上做了改进，修复了一些 bug，顺利搭建完成了我的个人博客。大家对此主题有兴趣的可以<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NodzIwMTgvaGV4by1ibG9nLWZseQ==">下载源代码</span>，搭建属于自己的个性化博客。</p>
+<ul>
+<li>个人博客 演示：<span class="exturl" data-url="aHR0cHM6Ly95aWNoZW5tLmdpdGh1Yi5pby8=">https://yichenm.github.io/</span></li>
+</ul>
+<hr />
+<h2 id="0x003-hexo-初级搭建"><a class="anchor" href="#0x003-hexo-初级搭建">#</a> 0x003 Hexo 初级搭建</h2>
+<hr />
+<h3 id="1-安装git"><a class="anchor" href="#1-安装git">#</a> 1. 安装 Git</h3>
+<p><code>Git</code>  是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。 <code>Git</code>  的作用是将本地的网页文件传到 <code>github</code>  上。</p>
+<ul>
+<li>Git<span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZA=="> 下载地址</span></li>
+<li>Git<span class="exturl" data-url="aHR0cHM6Ly93d3cubGlhb3h1ZWZlbmcuY29tL3dpa2kvODk2MDQzNDg4MDI5NjAw"> 教程</span></li>
+</ul>
+<p><strong>windows：</strong> 到 git 官网上下载.exe 文件，Download git, 安装选项还是全部默认，最后一步添加路径时选择 <code>Use Git from the Windows Command Prompt</code> 。</p>
+<h3 id="2-安装nodejs"><a class="anchor" href="#2-安装nodejs">#</a> 2. 安装 node.js</h3>
+<p><code>Hexo</code>  是基于 <code>node.js</code>  编写的，所以需要安装一下 <code>node.js</code>  和里面的 <code>npm</code>  工具。</p>
+<p><strong>windows：</strong> 到<span class="exturl" data-url="aHR0cDovL25vZGVqcy5jbi9kb3dubG9hZC8="> Node.js 官网</span>下载 <code>.exe</code>  文件，安装选项全部默认。安装好之后，按 <code>Win+R</code>  打开 cmd 命令提示符，输入 <code>node -v</code>  和 <code>npm -v</code> ，若出现版本号，则说明安装成功。</p>
+<h3 id="3-添加npm国内源"><a class="anchor" href="#3-添加npm国内源">#</a> 3. 添加 npm 国内源</h3>
+<p>使用阿里的国内镜像进行加速下载</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry https://registry.npm.taobao.org</pre></td></tr></table></figure><h3 id="4-安装hexo"><a class="anchor" href="#4-安装hexo">#</a> 4. 安装 Hexo</h3>
+<p>前面 <code>git</code>  和 <code>nodejs</code>  安装好后，就可以安装 <code>hexo</code>  了，你可以先创建一个文件夹 <code>MyBlog</code> ，用来存放自己的博客文件，然后 <code>cd</code>  到这个文件夹下（或者在这个文件夹下直接右键 <code>git bash</code>  打开）。</p>
+<p>比如我的博客文件都存放在 <code>E:\MyBlog</code>  目录下。</p>
+<p>在该目录下右键点击 <code>Git Bash Here</code> ，打开 <code>git</code>  的控制台窗口，以后我们所有的操作都在 <code>git</code>  控制台进行，就不用 <code>Windows</code>  自带的 <code>cmd</code>  了。</p>
+<p>定位到该目录下，输入 <code>npm install -g hexo-cli</code>  安装 <code>Hexo</code> 。可能会有几个报错，不用理会。</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli</pre></td></tr></table></figure><p>安装完后输入 <code>hexo -v</code>  验证是否安装成功。</p>
+<p>到此为止 <code>hexo</code>  就安装完了。</p>
+<p>接下来初始化一下 <code>hexo</code> , 即初始化我们的网站，输入 <code>hexo init</code>  初始化文件夹</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>hexo init MyBlog</pre></td></tr></table></figure><p>新建完成后，指定文件夹 <code>MyBlog</code>  目录下有：</p>
+<ul>
+<li><code>node_modules</code> : 依赖包</li>
+<li><code>public</code> ：存放生成的页面</li>
+<li><code>scaffolds</code> ：生成文章的一些模板</li>
+<li><code>source</code> ：用来存放你的文章</li>
+<li><code>themes</code> ：主题 **</li>
+<li><code>_config.yml</code> : 博客的配置文件 **</li>
+</ul>
+<p>到此为止，本地的网站配置完成了。</p>
+<p>输入 <code>hexo g</code>  生成静态网页，然后输入 <code>hexo s</code>  打开本地服务器</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>hexo g</pre></td></tr><tr><td data-num="2"></td><td><pre>hexo s</pre></td></tr></table></figure><p><img data-src="https://s1.ax1x.com/2020/03/12/8VdlGD.png" alt="" /></p>
+<h3 id="5-注册github账号创建个人仓库"><a class="anchor" href="#5-注册github账号创建个人仓库">#</a> 5. 注册 Github 账号创建个人仓库</h3>
+<p>接下来就去注册一个 <code>github</code>  账号，用来存放我们的网站。</p>
+<p>打开<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLw=="> https://github.com/</span>，新建一个项目仓库 <code>New repository</code> ，如下所示：</p>
+<p><img data-src="https://s1.ax1x.com/2020/03/12/8VwrtK.png" alt="" /></p>
+<p>然后如下图所示，输入自己的项目名字，后面一定要加 <code>.github.io</code>  后缀，README 初始化也要勾上</p>
+<p><img data-src="https://s1.ax1x.com/2020/03/12/8VdoQJ.png" alt="" /></p>
+<blockquote>
+<p>要创建一个和你用户名相同的仓库，后面加 <code>.github.io</code> ，只有这样，将来要部署到 <code>GitHub page</code>  的时候，才会被识别，也就是 <code>http://xxxx.github.io</code> ，其中 xxx 就是你注册 <code>GitHub</code>  的用户名。例如我的： <code>http://LuckyZmj.github.io</code></p>
+</blockquote>
+<h3 id="6-生成ssh添加到github"><a class="anchor" href="#6-生成ssh添加到github">#</a> 6. 生成 SSH 添加到 GitHub</h3>
+<p>生成 <code>SSH</code>  添加到 <code>GitHub</code> ，连接 <code>Github</code>  与本地。<br />
+右键打开 <code>git bash here</code> ，然后输入下面命令：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">git</span> config --global user.name <span class="token string">"注册GitHub用户名"</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token function">git</span> config --global user.email <span class="token string">"注册GitHub的邮箱"</span></pre></td></tr></table></figure><p>用以下两条，检查一下你有没有输对</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">git</span> config user.name</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token function">git</span> config user.email</pre></td></tr></table></figure><p>然后创建 <code>SSH</code> , 一路回车</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>ssh-keygen -t rsa -C <span class="token string">"注册GitHub的邮箱"</span></pre></td></tr></table></figure><p>这个时候它会告诉你已经生成了 <code>.ssh</code>  的文件夹。在 <code>git bash</code>  中输入</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">cat</span> ~/.ssh/id_rsa.pub</pre></td></tr></table></figure><p>将输出的内容复制到框中，点击确定保存。</p>
+<p>打开 <code>github</code> ，在头像下面点击 <code>settings</code> ，再点击 <code>SSH and GPG keys</code> ，新建一个 <code>SSH</code> ，名字随便取一个都可以，把你的 <code>id_rsa.pub</code>  里面的信息复制进去。如图：</p>
+<p><img data-src="https://s1.ax1x.com/2020/03/12/8Vwnyj.png" alt="" /></p>
+<p>在 <code>git bash</code>  输入 <code>ssh -T git@github.com</code> ，如果如下图所示，出现你的用户名，那就成功了。</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">ssh</span> -T git@github.com</pre></td></tr></table></figure><h3 id="7-将hexo部署到github"><a class="anchor" href="#7-将hexo部署到github">#</a> 7. 将 hexo 部署到 GitHub</h3>
+<p>将 <code>hexo</code>  生成的文章部署到 <code>GitHub</code>  上，打开博客根目录下的 <code>_config.yml</code>  文件，这是博客的配置文件，在这里你可以修改与博客配置相关的各种信息。<br />
+找到如下配置进行修改：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>deploy:</pre></td></tr><tr><td data-num="2"></td><td><pre>  type: <span class="token function">git</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  repository: https://github.com/LuckyZmj/LuckyZmj.github.io</pre></td></tr><tr><td data-num="4"></td><td><pre>  branch: master</pre></td></tr></table></figure><p><code>repository</code>  修改为你自己的 <code>github</code>  项目地址即可，就是部署时，告诉工具，将生成网页通过 <code>git</code>  方式上传到你对应的链接仓库中。</p>
+<p>这个时候需要先安装 <code>deploy-git</code>  ，也就是部署的命令，这样你才能用命令部署到 <code>GitHub</code> 。</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save</pre></td></tr></table></figure><p>然后就可以部署提交到 <code>github</code> ，过一会儿就可以在 <code>http://yourname.github.io</code>  这个网站看到你的博客了</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>hexo clean</pre></td></tr><tr><td data-num="2"></td><td><pre>hexo generate</pre></td></tr><tr><td data-num="3"></td><td><pre>hexo deploy</pre></td></tr></table></figure><p>其中  <code>hexo clean</code>  清除了你之前生成的东西。  <code>hexo generate</code> ，生成静态文章，可以用  <code>hexo g</code>  缩写 ， <code>hexo deploy</code>  部署文章，可以用 <code>hexo d</code>  缩写</p>
+<blockquote>
+<p>注意 <code>deploy</code>  时可能要你输入 <code>username</code>  和 <code>password</code> 。</p>
+</blockquote>
+<h3 id="8-写文章和发布文章"><a class="anchor" href="#8-写文章和发布文章">#</a> 8. 写文章和发布文章</h3>
+<p>首先在博客根目录下右键打开 <code>git bash here</code> ，安装一个扩展 <code>npm i hexo-deployer-git</code> 。</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> i hexo-deployer-git</pre></td></tr></table></figure><p>然后输入 <code>hexo new post &quot;article title&quot;</code> ，新建一篇文章。</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>hexo new post <span class="token string">"article title"</span></pre></td></tr></table></figure><p>然后打开 <code>E:\MyBlog\source\_posts</code>  的目录，可以发现下面多了一个文件夹和一个 <code>.md</code>  文件，一个用来存放你的图片等数据，另一个就是你的文章文件。</p>
+<p>另外推荐直接使用 <code>有道云</code> 编写 <code>markdown</code>  文章，不仅可以实时预览，还可以快捷的生成 <code>markdown</code>  语法格式，具体效果如下图所示。</p>
+<p><img data-src="https://s1.ax1x.com/2020/03/12/8VwItf.png" alt="有道云" /></p>
+<p>编写完 <code>markdown</code>  文件后，根目录下输入 <code>hexo g</code>  生成静态网页，然后输入 <code>hexo s</code>  可以本地预览效果，最后输入 <code>hexo d</code>  上传到 <code>github</code>  上。这时打开你的 <code>github.io</code>  主页就能看到发布的文章了。</p>
+<p>到此为止， <code>Hexo</code>  初级搭建就已经完成了。</p>
+<h2 id="0x004-hexo-优化定制"><a class="anchor" href="#0x004-hexo-优化定制">#</a> 0x004 Hexo 优化定制</h2>
+<hr />
+<h3 id="1-hexo相关目录文件"><a class="anchor" href="#1-hexo相关目录文件">#</a> 1. Hexo 相关目录文件</h3>
+<h4 id="11-博客目录构成介绍"><a class="anchor" href="#11-博客目录构成介绍">#</a> 1.1 博客目录构成介绍</h4>
+<p><code>node_modules</code>  是 <code>node.js</code>  各种库的目录， <code>public</code>  是生成的网页文件目录， <code>scaffolds</code>  里面就三个文件，存储着新文章和新页面的初始设置， <code>source</code>  是我们最常用到的一个目录，里面存放着文章、各类页面、图像等文件， <code>themes</code>  存放着主题文件，一般也用不到。</p>
+<p>我们平时写文章只需要关注 <code>source/_posts</code>  这个文件夹就行了。</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>- node_modules</pre></td></tr><tr><td data-num="2"></td><td><pre>- public</pre></td></tr><tr><td data-num="3"></td><td><pre>- scaffolds</pre></td></tr><tr><td data-num="4"></td><td><pre>- <span class="token builtin class-name">source</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    - _data</pre></td></tr><tr><td data-num="6"></td><td><pre>    - _posts</pre></td></tr><tr><td data-num="7"></td><td><pre>    - about</pre></td></tr><tr><td data-num="8"></td><td><pre>    - archives</pre></td></tr><tr><td data-num="9"></td><td><pre>    - categories</pre></td></tr><tr><td data-num="10"></td><td><pre>    - friends</pre></td></tr><tr><td data-num="11"></td><td><pre>    - tags</pre></td></tr><tr><td data-num="12"></td><td><pre>- themes</pre></td></tr></table></figure><h4 id="12-hexo基本配置"><a class="anchor" href="#12-hexo基本配置">#</a> 1.2 hexo 基本配置</h4>
+<p>在文件根目录下的 <code>_config.yml</code> ，就是整 <code>个hexo</code>  框架的配置文件了。可以在里面修改大部分的配置。详细可参考官方的<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvY29uZmlndXJhdGlvbg==">配置描述</span>。</p>
+<h5 id="121-网站"><a class="anchor" href="#121-网站">#</a> 1.2.1 网站</h5>
+<p>参数描述 <code>title</code>  网站标题 <code>subtitle</code>  网站副标题 <code>description</code>  网站描述 <code>author</code>  您的名字 <code>language</code>  网站使用的语言 <code>timezone</code>  网站时区。 <code>Hexo</code>  默认使用您电脑的时区。时区列表。比如说： <code>America/New_York</code> ,  <code>Japan</code> , 和  <code>UTC</code>  。</p>
+<p>其中， <code>description</code>  主要用于 <code>SEO</code> ，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。 <code>author</code>  参数用于主题显示文章的作者。</p>
+<h5 id="122-网址"><a class="anchor" href="#122-网址">#</a> 1.2.2 网址</h5>
+<p>参数描述 <code>url</code>  网址 <code>root</code>  网站根目录  <code>permalink</code>  文章的<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvcGVybWFsaW5rcw==">永久链接</span>格式 <code>permalink_defaults</code>  永久链接中各部分的默认值</p>
+<p>在这里，你需要把 <code>url</code>  改成你的网站域名。</p>
+<p><code>permalink</code> ，也就是你生成某个文章时的那个链接格式。</p>
+<p>比如我新建一个文章叫 <code>temp.md</code> ，那么这个时候他自动生成的地址就是 <code>http://yoursite.com/2018/09/05/temp</code> 。</p>
+<p>以下是官方给出的示例，关于链接的变量还有很多，需要的可以去官网上查找<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvcGVybWFsaW5rcw==">永久链接</span> 。</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>参数结果</pre></td></tr><tr><td data-num="2"></td><td><pre>:year/:month/:day/:title       /2019/08/10/hello-world </pre></td></tr><tr><td data-num="3"></td><td><pre>:year-:month-:day-:title.html  <span class="token number">2019</span>-08-10-hello-world.html </pre></td></tr><tr><td data-num="4"></td><td><pre>:category/:titlefoo            /bar/hello-world</pre></td></tr></table></figure><h3 id="2-定制主题"><a class="anchor" href="#2-定制主题">#</a> 2. 定制主题</h3>
+<p>这里推荐作者 <code>洪卫</code> 的<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NodzIwMTgvaGV4by1ibG9nLWZseS5naXQ="> hexo-blog-fly</span> 博客主题，该主题是基于<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JsaW5rZm94L2hleG8tdGhlbWUtbWF0ZXJ5"> hexo-theme-matery</span> 优化的，需要把博客相关信息换成您自己的就可以部署了，极大简化了构建博客的工作量和复杂度。</p>
+<h4 id="21-简单使用方法"><a class="anchor" href="#21-简单使用方法">#</a> 2.1 简单使用方法</h4>
+<ol>
+<li>安装 <code>Git</code> , 安装 <code>nodeJS</code> ，安装 <code>Hexo</code></li>
+<li>你可以直接 <code>fork</code>  一份源码到你的仓库， <code>clone</code>  到本地博客文件夹内</li>
+<li>在本地博客仓库运行 <code>npm i</code>  命令安装依赖包</li>
+<li>直接修改配置信息，改成自己的信息</li>
+<li>运行命令 <code>hexo clean</code> （清除生成文件）， <code>hexo g</code> （生成网页），  <code>hexo s</code> （本地预览）， <code>hexo d</code> （部署）</li>
+</ol>
+<h4 id="22-原主题特性"><a class="anchor" href="#22-原主题特性">#</a> 2.2 原主题特性:</h4>
+<ul>
+<li>简单漂亮，文章内容美观易读</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9tYXRlcmlhbC5pby8=">Material Design</span> 设计</li>
+<li>响应式设计，博客在桌面端、平板、手机等设备上均能很好的展现</li>
+<li>首页轮播文章及每天动态切换  <code>Banner</code>  图片</li>
+<li>瀑布流式的博客文章列表（文章无特色图片时会有  <code>24</code>  张漂亮的图片代替）</li>
+<li>时间轴式的归档页</li>
+<li><strong>词云</strong>的标签页和<strong>雷达图</strong>的分类页</li>
+<li>丰富的关于我页面（包括关于我、文章统计图、我的项目、我的技能、相册等）</li>
+<li>可自定义的数据的友情链接页面</li>
+<li>支持文章置顶和文章打赏</li>
+<li>支持  <code>MathJax</code></li>
+<li><code>TOC</code>  目录</li>
+<li>可设置复制文章内容时追加版权信息</li>
+<li>可设置阅读文章时做密码验证</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRhbGsuZ2l0aHViLmlvLw==">Gitalk</span>、<span class="exturl" data-url="aHR0cHM6Ly9pbXN1bi5naXRodWIuaW8vZ2l0bWVudC8=">Gitment</span>、<span class="exturl" data-url="aHR0cHM6Ly92YWxpbmUuanMub3JnLw==">Valine</span> 和 <span class="exturl" data-url="aHR0cHM6Ly9kaXNxdXMuY29tLw==">Disqus</span> 评论模块（推荐使用  <code>Gitalk</code> ）</li>
+<li>集成了<span class="exturl" data-url="aHR0cDovL2J1c3VhbnppLmlicnVjZS5pbmZvLw==">不蒜子统计</span>、谷歌分析（ <code>Google Analytics</code> ）和文章字数统计等功能</li>
+<li>支持在首页的音乐播放和视频播放功能</li>
+</ul>
+<h4 id="23-新增加特性"><a class="anchor" href="#23-新增加特性">#</a> 2.3 新增加特性:</h4>
+<ul>
+<li>修改了原主题的一些很多 bug</li>
+<li>加入图片懒加载功能，在根目录配置文件开启和关闭</li>
+<li>增加留言板功能</li>
+<li>在关于板块，加入简历功能页</li>
+<li>增加视听 [视觉听觉影音] 板块</li>
+<li>支持 emoji 表情，用 markdown emoji 语法书写直接生成对应的能跳跃的表情。</li>
+<li>增加网站运行时间显示</li>
+<li>增加动漫模型</li>
+<li>整体替换 Banner 图片和文章特色图片</li>
+<li>增加分类相册功能</li>
+<li>修改了一些控件的参数</li>
+<li>修改部分样式，比如：文章卡片，固定高度，使其不至于因为文章摘要的长短不同导致卡片大小不一使页面布局很不美观，类似的还有友链卡片，优化了页面内容布局，视觉更整齐美观</li>
+<li>解决首页文章列表卡片上方 border-radius 圆角失效的 bug</li>
+<li>添加页面樱花飘落动效</li>
+<li>添加鼠标点击烟花爆炸动效</li>
+<li>加入天气接口控件</li>
+<li>加入鼠标点击文字特效</li>
+<li>添加页面雪花飘落动效</li>
+<li>添加在线聊天插件</li>
+<li>调整线聊天插件参数，使之能够随着鼠标滑动位置自适应调整</li>
+<li>持续更新...</li>
+</ul>
+<hr />
+<h4 id="24-切换主题"><a class="anchor" href="#24-切换主题">#</a> 2.4 切换主题</h4>
+<p>如果想自己动手对<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JsaW5rZm94L2hleG8tdGhlbWUtbWF0ZXJ5"> hexo-theme-matery</span> 优化的话，可以修改 Hexo 根目录下的 <code> _config.yml</code>  的  <code>theme</code>  的值</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>theme: hexo-theme-matery</pre></td></tr></table></figure><p><code>_config.yml</code>  文件的其它修改建议:</p>
+<ul>
+<li>请修改  <code>_config.yml</code>  的  <code>url</code>  的值为你的网站主  <code>URL</code> （如： <code>http://xxx.github.io</code> ）。</li>
+<li>建议修改两个  <code>per_page</code>  的分页条数值为 6 的倍数，如：12、18 等，这样文章列表在各个屏幕下都能较好的显示。</li>
+<li>如果你是中文用户，则建议修改  <code>language</code>  的值为  <code>zh-CN</code> 。</li>
+</ul>
+<h4 id="25-新建分类-categories-页"><a class="anchor" href="#25-新建分类-categories-页">#</a> 2.5 新建分类 categories 页</h4>
+<p><code>categories</code>  页是用来展示所有分类的页面，如果在你的博客  <code>source</code>  目录下还没有  <code>categories/index.md</code>  文件，那么你就需要新建一个，命令如下：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>hexo new page <span class="token string">"categories"</span></pre></td></tr></table></figure><p>编辑你刚刚新建的页面文件  <code>/source/categories/index.md</code> ，至少需要以下内容：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>---</pre></td></tr><tr><td data-num="2"></td><td><pre>title: categories</pre></td></tr><tr><td data-num="3"></td><td><pre>date: <span class="token number">2018</span>-09-30 <span class="token number">17</span>:25:30</pre></td></tr><tr><td data-num="4"></td><td><pre>type: <span class="token string">"categories"</span></pre></td></tr><tr><td data-num="5"></td><td><pre>layout: <span class="token string">"categories"</span></pre></td></tr><tr><td data-num="6"></td><td><pre>---</pre></td></tr></table></figure><h4 id="26-新建标签-tags-页"><a class="anchor" href="#26-新建标签-tags-页">#</a> 2.6 新建标签 tags 页</h4>
+<p><code>tags</code>  页是用来展示所有标签的页面，如果在你的博客  <code>source</code>  目录下还没有  <code>tags/index.md</code>  文件，那么你就需要新建一个，命令如下：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>hexo new page <span class="token string">"tags"</span></pre></td></tr></table></figure><p>编辑你刚刚新建的页面文件  <code>/source/tags/index.md</code> ，至少需要以下内容：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>---</pre></td></tr><tr><td data-num="2"></td><td><pre>title: tags</pre></td></tr><tr><td data-num="3"></td><td><pre>date: <span class="token number">2018</span>-09-30 <span class="token number">18</span>:23:38</pre></td></tr><tr><td data-num="4"></td><td><pre>type: <span class="token string">"tags"</span></pre></td></tr><tr><td data-num="5"></td><td><pre>layout: <span class="token string">"tags"</span></pre></td></tr><tr><td data-num="6"></td><td><pre>---</pre></td></tr></table></figure><h4 id="27-新建关于我-about-页"><a class="anchor" href="#27-新建关于我-about-页">#</a> 2.7 新建关于我 about 页</h4>
+<p><code>about</code>  页是用来展示关于我和我的博客信息的页面，如果在你的博客  <code>source</code>  目录下还没有  <code>about/index.md</code>  文件，那么你就需要新建一个，命令如下：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>hexo new page <span class="token string">"about"</span></pre></td></tr></table></figure><p>编辑你刚刚新建的页面文件  <code>/source/about/index.md</code> ，至少需要以下内容：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>---</pre></td></tr><tr><td data-num="2"></td><td><pre>title: about</pre></td></tr><tr><td data-num="3"></td><td><pre>date: <span class="token number">2018</span>-09-30 <span class="token number">17</span>:25:30</pre></td></tr><tr><td data-num="4"></td><td><pre>type: <span class="token string">"about"</span></pre></td></tr><tr><td data-num="5"></td><td><pre>layout: <span class="token string">"about"</span></pre></td></tr><tr><td data-num="6"></td><td><pre>---</pre></td></tr></table></figure><h4 id="28-新建留言板-contact-页可选的"><a class="anchor" href="#28-新建留言板-contact-页可选的">#</a> 2.8 新建留言板 contact 页（可选的）</h4>
+<p><code>contact</code>  页是用来展示留言板信息的页面，前提是已经开启了第三方评论系统才能显示。如果在你的博客  <code>source</code>  目录下还没有  <code>contact/index.md</code>  文件，那么你就需要新建一个，命令如下：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>hexo new page <span class="token string">"contact"</span></pre></td></tr></table></figure><p>编辑你刚刚新建的页面文件  <code>/source/contact/index.md</code> ，至少需要以下内容：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>---</pre></td></tr><tr><td data-num="2"></td><td><pre>title: contact</pre></td></tr><tr><td data-num="3"></td><td><pre>date: <span class="token number">2018</span>-09-30 <span class="token number">17</span>:25:30</pre></td></tr><tr><td data-num="4"></td><td><pre>type: <span class="token string">"contact"</span></pre></td></tr><tr><td data-num="5"></td><td><pre>layout: <span class="token string">"contact"</span></pre></td></tr><tr><td data-num="6"></td><td><pre>---</pre></td></tr></table></figure><h4 id="29-新建友情链接-friends-页可选的"><a class="anchor" href="#29-新建友情链接-friends-页可选的">#</a> 2.9 新建友情链接 friends 页（可选的）</h4>
+<p><code>friends</code>  页是用来展示友情链接信息的页面，如果在你的博客  <code>source</code>  目录下还没有  <code>friends/index.md</code>  文件，那么你就需要新建一个，命令如下：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>hexo new page <span class="token string">"friends"</span></pre></td></tr></table></figure><p>编辑你刚刚新建的页面文件  <code>/source/friends/index.md</code> ，至少需要以下内容：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>---</pre></td></tr><tr><td data-num="2"></td><td><pre>title: friends</pre></td></tr><tr><td data-num="3"></td><td><pre>date: <span class="token number">2018</span>-12-12 <span class="token number">21</span>:25:30</pre></td></tr><tr><td data-num="4"></td><td><pre>type: <span class="token string">"friends"</span></pre></td></tr><tr><td data-num="5"></td><td><pre>layout: <span class="token string">"friends"</span></pre></td></tr><tr><td data-num="6"></td><td><pre>---</pre></td></tr></table></figure><p>同时，在你的博客  <code>source</code>  目录下新建  <code>_data</code>  目录，在  <code>_data</code>  目录中新建  <code>friends.json</code>  文件，文件内容如下所示：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token punctuation">[</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token string">"avatar"</span><span class="token builtin class-name">:</span> <span class="token string">"http://image.luokangyuan.com/1_qq_27922023.jpg"</span>,</pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token string">"name"</span><span class="token builtin class-name">:</span> <span class="token string">"码酱"</span>,</pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token string">"introduction"</span><span class="token builtin class-name">:</span> <span class="token string">"我不是大佬，只是在追寻大佬的脚步"</span>,</pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token string">"url"</span><span class="token builtin class-name">:</span> <span class="token string">"http://luokangyuan.com/"</span>,</pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token string">"title"</span><span class="token builtin class-name">:</span> <span class="token string">"前去学习"</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token punctuation">&#125;</span>, <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token string">"avatar"</span><span class="token builtin class-name">:</span> <span class="token string">"http://image.luokangyuan.com/4027734.jpeg"</span>,</pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token string">"name"</span><span class="token builtin class-name">:</span> <span class="token string">"闪烁之狐"</span>,</pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token string">"introduction"</span><span class="token builtin class-name">:</span> <span class="token string">"编程界大佬，技术牛，人还特别好，不懂的都可以请教大佬"</span>,</pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token string">"url"</span><span class="token builtin class-name">:</span> <span class="token string">"https://blinkfox.github.io/"</span>,</pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token string">"title"</span><span class="token builtin class-name">:</span> <span class="token string">"前去学习"</span></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token punctuation">&#125;</span>, <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token string">"avatar"</span><span class="token builtin class-name">:</span> <span class="token string">"http://image.luokangyuan.com/avatar.jpg"</span>,</pre></td></tr><tr><td data-num="15"></td><td><pre>    <span class="token string">"name"</span><span class="token builtin class-name">:</span> <span class="token string">"ja_rome"</span>,</pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token string">"introduction"</span><span class="token builtin class-name">:</span> <span class="token string">"平凡的脚步也可以走出伟大的行程"</span>,</pre></td></tr><tr><td data-num="17"></td><td><pre>    <span class="token string">"url"</span><span class="token builtin class-name">:</span> <span class="token string">"https://me.csdn.net/jlh912008548"</span>,</pre></td></tr><tr><td data-num="18"></td><td><pre>    <span class="token string">"title"</span><span class="token builtin class-name">:</span> <span class="token string">"前去学习"</span></pre></td></tr><tr><td data-num="19"></td><td><pre><span class="token punctuation">&#125;</span><span class="token punctuation">]</span></pre></td></tr></table></figure><h4 id="210-一级菜单导航配置"><a class="anchor" href="#210-一级菜单导航配置">#</a> 2.10 一级菜单导航配置</h4>
+<p>配置基本菜单导航的名称、路径 <code>url</code>  和图标 <code>icon</code></p>
+<ul>
+<li>菜单导航名称可以是中文也可以是英文 (如： <code>Index</code>  或主页)</li>
+<li>图标 <code>icon</code>  可以在 <code>Font Awesome</code>  中查找</li>
+</ul>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>menu:</pre></td></tr><tr><td data-num="2"></td><td><pre>  Index:</pre></td></tr><tr><td data-num="3"></td><td><pre>    url: /</pre></td></tr><tr><td data-num="4"></td><td><pre>    icon: fas fa-home</pre></td></tr><tr><td data-num="5"></td><td><pre>  Tags:</pre></td></tr><tr><td data-num="6"></td><td><pre>    url: /tags</pre></td></tr><tr><td data-num="7"></td><td><pre>    icon: fas fa-tags</pre></td></tr><tr><td data-num="8"></td><td><pre>  Categories:</pre></td></tr><tr><td data-num="9"></td><td><pre>    url: /categories</pre></td></tr><tr><td data-num="10"></td><td><pre>    icon: fas fa-bookmark</pre></td></tr><tr><td data-num="11"></td><td><pre>  Archives:</pre></td></tr><tr><td data-num="12"></td><td><pre>    url: /archives</pre></td></tr><tr><td data-num="13"></td><td><pre>    icon: fas fa-archive</pre></td></tr><tr><td data-num="14"></td><td><pre>  About:</pre></td></tr><tr><td data-num="15"></td><td><pre>    url: /about</pre></td></tr><tr><td data-num="16"></td><td><pre>    icon: fas fa-user-circle</pre></td></tr><tr><td data-num="17"></td><td><pre>  Friends:</pre></td></tr><tr><td data-num="18"></td><td><pre>    url: /friends</pre></td></tr><tr><td data-num="19"></td><td><pre>    icon: fas fa-address-book</pre></td></tr></table></figure><h4 id="211-二级菜单配置方法"><a class="anchor" href="#211-二级菜单配置方法">#</a> 2.11 二级菜单配置方法</h4>
+<p>如果你需要二级菜单则可以在原基本菜单导航的基础上如下操作</p>
+<ul>
+<li>在需要添加二级菜单的一级菜单下添加 <code>children</code>  关键字 (如: <code>About</code>  菜单下添加 <code>children</code> )</li>
+<li>在 <code>children</code>  下创建二级菜单的 名称 <code>name</code> , 路径 <code>url</code>  和图标 <code>icon</code> .</li>
+<li>注意每个二级菜单模块前要加 -.</li>
+<li>注意缩进格式</li>
+</ul>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>menu:</pre></td></tr><tr><td data-num="2"></td><td><pre>  Index:</pre></td></tr><tr><td data-num="3"></td><td><pre>    url: /</pre></td></tr><tr><td data-num="4"></td><td><pre>    icon: fas fa-home</pre></td></tr><tr><td data-num="5"></td><td><pre>  Tags:</pre></td></tr><tr><td data-num="6"></td><td><pre>    url: /tags</pre></td></tr><tr><td data-num="7"></td><td><pre>    icon: fas fa-tags</pre></td></tr><tr><td data-num="8"></td><td><pre>  Categories:</pre></td></tr><tr><td data-num="9"></td><td><pre>    url: /categories</pre></td></tr><tr><td data-num="10"></td><td><pre>    icon: fas fa-bookmark</pre></td></tr><tr><td data-num="11"></td><td><pre>  Archives:</pre></td></tr><tr><td data-num="12"></td><td><pre>    url: /archives</pre></td></tr><tr><td data-num="13"></td><td><pre>    icon: fas fa-archive</pre></td></tr><tr><td data-num="14"></td><td><pre>  About:</pre></td></tr><tr><td data-num="15"></td><td><pre>    url: /about</pre></td></tr><tr><td data-num="16"></td><td><pre>    icon: fas fa-user-circle-o</pre></td></tr><tr><td data-num="17"></td><td><pre>  Friends:</pre></td></tr><tr><td data-num="18"></td><td><pre>    url: /friends</pre></td></tr><tr><td data-num="19"></td><td><pre>    icon: fas fa-address-book</pre></td></tr><tr><td data-num="20"></td><td><pre>  Medias:</pre></td></tr><tr><td data-num="21"></td><td><pre>    icon: fas fa-list</pre></td></tr><tr><td data-num="22"></td><td><pre>    children:</pre></td></tr><tr><td data-num="23"></td><td><pre>      - name: Musics</pre></td></tr><tr><td data-num="24"></td><td><pre>        url: /musics</pre></td></tr><tr><td data-num="25"></td><td><pre>        icon: fas fa-music</pre></td></tr><tr><td data-num="26"></td><td><pre>      - name: Movies</pre></td></tr><tr><td data-num="27"></td><td><pre>        url: /movies</pre></td></tr><tr><td data-num="28"></td><td><pre>        icon: fas fa-film</pre></td></tr><tr><td data-num="29"></td><td><pre>      - name: Books</pre></td></tr><tr><td data-num="30"></td><td><pre>        url: /books</pre></td></tr><tr><td data-num="31"></td><td><pre>        icon: fas fa-book</pre></td></tr><tr><td data-num="32"></td><td><pre>      - name: Galleries</pre></td></tr><tr><td data-num="33"></td><td><pre>        url: /galleries</pre></td></tr><tr><td data-num="34"></td><td><pre>        icon: fas fa-image</pre></td></tr></table></figure><p>执行  <code>hexo clean</code>  &amp;&amp;  <code>hexo g</code>  重新生成博客文件。</p>
+<h4 id="212-代码高亮"><a class="anchor" href="#212-代码高亮">#</a> 2.12 代码高亮</h4>
+<p>由于  <code>Hexo</code>  自带的代码高亮主题显示不好看，所以主题中使用到了  <code>hexo-prism-plugin</code>  的  <code>Hexo</code>  插件来做代码高亮，安装命令如下：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> i -S hexo-prism-plugin</pre></td></tr></table></figure><p>然后，修改  <code>Hexo</code>  根目录下  <code>_config.yml</code>  文件中  <code>highlight.enable</code>  的值为  <code>false</code> ，并新增  <code>prism</code>  插件相关的配置，主要配置如下：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>highlight:</pre></td></tr><tr><td data-num="2"></td><td><pre>  enable: <span class="token boolean">false</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>prism_plugin:</pre></td></tr><tr><td data-num="5"></td><td><pre>  mode: <span class="token string">'preprocess'</span>    <span class="token comment"># realtime/preprocess</span></pre></td></tr><tr><td data-num="6"></td><td><pre>  theme: <span class="token string">'tomorrow'</span></pre></td></tr><tr><td data-num="7"></td><td><pre>  line_number: <span class="token boolean">false</span>    <span class="token comment"># default false</span></pre></td></tr><tr><td data-num="8"></td><td><pre>  custom_css:</pre></td></tr></table></figure><blockquote>
+<p>更多代码块优化详细内容请访问：<span class="exturl" data-url="aHR0cDovL3lpY2hlbm0uY29t">http://yichenm.com</span></p>
+</blockquote>
+<h4 id="213-搜索"><a class="anchor" href="#213-搜索">#</a> 2.13 搜索</h4>
+<p>本主题中还使用到了  <code>hexo-generator-search</code>  的  <code>Hexo</code>  插件来做内容搜索，安装命令如下：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search --save</pre></td></tr></table></figure><p>在  <code>Hexo</code>  根目录下的  <code>_config.yml</code>  文件中，新增以下的配置项：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>search:</pre></td></tr><tr><td data-num="2"></td><td><pre>  path: search.xml</pre></td></tr><tr><td data-num="3"></td><td><pre>  field: post</pre></td></tr></table></figure><h4 id="214-文章字数统计插件建议安装"><a class="anchor" href="#214-文章字数统计插件建议安装">#</a> 2.14 文章字数统计插件（建议安装）</h4>
+<p>如果你想要在文章中显示文章字数、阅读时长信息，可以安装  <code>hexo-wordcount</code>  插件。</p>
+<p>安装命令如下：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> i --save hexo-wordcount</pre></td></tr></table></figure><p>然后只需在本主题下的  <code>_config.yml</code>  文件中，将各个文章字数相关的配置激活即可：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>postInfo:</pre></td></tr><tr><td data-num="2"></td><td><pre>  date: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  update: <span class="token boolean">false</span></pre></td></tr><tr><td data-num="4"></td><td><pre>  wordCount: <span class="token boolean">false</span> <span class="token comment"># 设置文章字数统计为 true.</span></pre></td></tr><tr><td data-num="5"></td><td><pre>  totalCount: <span class="token boolean">false</span> <span class="token comment"># 设置站点文章总字数统计为 true.</span></pre></td></tr><tr><td data-num="6"></td><td><pre>  min2read: <span class="token boolean">false</span> <span class="token comment"># 阅读时长.</span></pre></td></tr><tr><td data-num="7"></td><td><pre>  readCount: <span class="token boolean">false</span> <span class="token comment"># 阅读次数.</span></pre></td></tr></table></figure><h4 id="215-添加emoji表情支持可选的"><a class="anchor" href="#215-添加emoji表情支持可选的">#</a> 2.15 添加 emoji 表情支持（可选的）</h4>
+<p>本主题新增了对 <code>emoji</code>  表情的支持，使用到了  <code>hexo-filter-github-emojis</code>  的  <code>Hexo</code>  插件来支持  <code>emoji</code>  表情的生成，把对应的 <code>markdown</code>   <code>emoji</code>  语法（::, 例如： <code>:smile:</code> ）转变成会跳跃的 <code>emoji</code>  表情，安装命令如下：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> <span class="token function">install</span> hexo-filter-github-emojis --save</pre></td></tr></table></figure><p>在  <code>Hexo</code>  根目录下的  <code>_config.yml</code>  文件中，新增以下的配置项：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>githubEmojis:</pre></td></tr><tr><td data-num="2"></td><td><pre>  enable: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  className: github-emoji</pre></td></tr><tr><td data-num="4"></td><td><pre>  inject: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="5"></td><td><pre>  styles:</pre></td></tr><tr><td data-num="6"></td><td><pre>  customEmojis:</pre></td></tr></table></figure><h4 id="216-添加-rss-订阅支持可选的"><a class="anchor" href="#216-添加-rss-订阅支持可选的">#</a> 2.16 添加 RSS 订阅支持（可选的）</h4>
+<p>本主题中还使用到了 <code>hexo-generator-feed</code>   的  <code>Hexo</code>  插件来做  <code>RSS</code> ，安装命令如下：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-feed --save</pre></td></tr></table></figure><p>在  <code>Hexo</code>  根目录下的 <code> _config.yml</code>  文件中，新增以下的配置项：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>feed:</pre></td></tr><tr><td data-num="2"></td><td><pre>  type: atom</pre></td></tr><tr><td data-num="3"></td><td><pre>  path: atom.xml</pre></td></tr><tr><td data-num="4"></td><td><pre>  limit: <span class="token number">20</span></pre></td></tr><tr><td data-num="5"></td><td><pre>  hub:</pre></td></tr><tr><td data-num="6"></td><td><pre>  content:</pre></td></tr><tr><td data-num="7"></td><td><pre>  content_limit: <span class="token number">140</span></pre></td></tr><tr><td data-num="8"></td><td><pre>  content_limit_delim: <span class="token string">' '</span></pre></td></tr><tr><td data-num="9"></td><td><pre>  order_by: -date</pre></td></tr></table></figure><p>执行  <code>hexo clean</code>  &amp;&amp;  <code>hexo g</code>  重新生成博客文件，然后在  <code>public</code>  文件夹中即可看到  <code>atom.xml</code>  文件，说明你已经安装成功了。</p>
+<h4 id="217-添加-daovoice-在线聊天功能可选的"><a class="anchor" href="#217-添加-daovoice-在线聊天功能可选的">#</a> 2.17 添加 DaoVoice 在线聊天功能（可选的）</h4>
+<p>前往  <code>DaoVoice</code>  官网注册并且获取  <code>app_id</code> ，并将  <code>app_id</code>  填入主题的  <code>_config.yml</code>  文件中。</p>
+<h4 id="218-添加-tidio-在线聊天功能可选的"><a class="anchor" href="#218-添加-tidio-在线聊天功能可选的">#</a> 2.18 添加 Tidio 在线聊天功能（可选的）</h4>
+<p>前往  <code>Tidio</code>  官网注册并且获取  <code>Public Key</code> ，并将  <code>Public Key</code>  填入主题的  <code>_config.yml</code>  文件中。</p>
+<h4 id="219-修改页脚"><a class="anchor" href="#219-修改页脚">#</a> 2.19 修改页脚</h4>
+<p>页脚信息可能需要做定制化修改，而且它不便于做成配置信息，所以可能需要你自己去再修改和加工。修改的地方在主题文件的  <code>/layout/_partial/footer.ejs</code>  文件中，包括站点、使用的主题、访问量等。</p>
+<h4 id="220-修改社交链接"><a class="anchor" href="#220-修改社交链接">#</a> 2.20 修改社交链接</h4>
+<p>在主题的  <code>_config.yml</code>  文件中，默认支持  <code>QQ</code> 、 <code>GitHub</code>  和邮箱等的配置，你可以在主题文件的  <code>/layout/_partial/social-link.ejs</code>  文件中，新增、修改你需要的社交链接地址，增加链接可参考如下代码：</p>
+<figure class="highlight html"><figcaption data-lang="HTML"></figcaption><table><tr><td data-num="1"></td><td><pre>&lt;% if (theme.socialLink.github) &#123; %></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&lt;%= theme.socialLink.github %><span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tooltipped<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span> <span class="token attr-name">data-tooltip</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>访问我的GitHub<span class="token punctuation">"</span></span> <span class="token attr-name">data-position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">data-delay</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="3"></td><td><pre>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fab fa-github<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="5"></td><td><pre>&lt;% &#125; %></pre></td></tr></table></figure><p>其中，社交图标（如： <code>fa-github</code> ）你可以在  <code>Font Awesome</code>  中搜索找到。以下是常用社交图标的标识，供你参考：</p>
+<ul>
+<li>Facebook: fab fa-facebook</li>
+<li>Twitter: fab fa-twitter</li>
+<li>Google-plus: fab fa-google-plus</li>
+<li>Linkedin: fab fa-linkedin</li>
+<li>Tumblr: fab fa-tumblr</li>
+<li>Medium: fab fa-medium</li>
+<li>Slack: fab fa-slack</li>
+<li>Sina Weibo: fab fa-weibo</li>
+<li>Wechat: fab fa-weixin</li>
+<li>QQ: fab fa-qq</li>
+<li>Zhihu: fab fa-zhihu</li>
+</ul>
+<p>注意：本主题中使用的  <code>Font Awesome</code>  版本为 5.11.0。</p>
+<h4 id="221-修改打赏的二维码图片"><a class="anchor" href="#221-修改打赏的二维码图片">#</a> 2.21 修改打赏的二维码图片</h4>
+<p>在主题文件的  <code>source/medias/reward</code>  文件中，你可以替换成你的的微信和支付宝的打赏二维码图片。</p>
+<h4 id="222-配置音乐播放器可选的"><a class="anchor" href="#222-配置音乐播放器可选的">#</a> 2.22 配置音乐播放器（可选的）</h4>
+<p>要支持音乐播放，在主题的  <code>_config.yml</code>  配置文件中激活 <code>music</code>  配置即可</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 是否在首页显示音乐</span></pre></td></tr><tr><td data-num="2"></td><td><pre>music:</pre></td></tr><tr><td data-num="3"></td><td><pre>  enable: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="4"></td><td><pre>  title:     	    <span class="token comment">#非吸底模式有效</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    enable: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    show: 听听音乐</pre></td></tr><tr><td data-num="7"></td><td><pre>  server: netease   <span class="token comment">#require music platform: netease, tencent, kugou, xiami, baidu</span></pre></td></tr><tr><td data-num="8"></td><td><pre>  type: playlist    <span class="token comment">#require song, playlist, album, search, artist</span></pre></td></tr><tr><td data-num="9"></td><td><pre>  id: <span class="token number">503838841</span>     <span class="token comment">#require song id / playlist id / album id / search keyword</span></pre></td></tr><tr><td data-num="10"></td><td><pre>  fixed: <span class="token boolean">false</span>      <span class="token comment"># 开启吸底模式</span></pre></td></tr><tr><td data-num="11"></td><td><pre>  autoplay: <span class="token boolean">false</span>   <span class="token comment"># 是否自动播放</span></pre></td></tr><tr><td data-num="12"></td><td><pre>  theme: <span class="token string">'#42b983'</span></pre></td></tr><tr><td data-num="13"></td><td><pre>  loop: <span class="token string">'all'</span>       <span class="token comment"># 音频循环播放，可选值: 'all', 'one', 'none'</span></pre></td></tr><tr><td data-num="14"></td><td><pre>  order: <span class="token string">'random'</span>   <span class="token comment"># 音频循环顺序，可选值: 'list', 'random'</span></pre></td></tr><tr><td data-num="15"></td><td><pre>  preload: <span class="token string">'auto'</span>   <span class="token comment"># 预加载，可选值: 'none', 'metadata', 'auto'</span></pre></td></tr><tr><td data-num="16"></td><td><pre>  volume: <span class="token number">0.7</span>       <span class="token comment"># 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span></pre></td></tr><tr><td data-num="17"></td><td><pre>  listFolded: <span class="token boolean">true</span>  <span class="token comment"># 列表默认折叠</span></pre></td></tr><tr><td data-num="18"></td><td><pre></pre></td></tr><tr><td data-num="19"></td><td><pre>提示：</pre></td></tr><tr><td data-num="20"></td><td><pre>    server可选netease（网易云音乐），tencent（QQ音乐），kugou（酷狗音乐），xiami（虾米音乐），baidu（百度音乐）。</pre></td></tr><tr><td data-num="21"></td><td><pre></pre></td></tr><tr><td data-num="22"></td><td><pre>    type可选song（歌曲），playlist（歌单），album（专辑），search（搜索关键字），artist（歌手）</pre></td></tr><tr><td data-num="23"></td><td><pre></pre></td></tr><tr><td data-num="24"></td><td><pre>    id获取示例: 浏览器打开网易云音乐，点击我喜欢的音乐歌单，地址栏有一串数字，playlist的id即为这串数字。</pre></td></tr></table></figure><h4 id="223文章-front-matter-介绍"><a class="anchor" href="#223文章-front-matter-介绍">#</a> 2.23 文章 Front-matter 介绍</h4>
+<p><code>Front-matter</code>  选项中的所有内容均为非必填的。但我仍然建议至少填写  <code>title</code>  和  <code>date</code>  的值。</p>
+<table>
+<thead>
+<tr>
+<th>配置选项</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>Markdown 的文件标题</td>
+<td>文章标题，强烈建议填写此选项</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文件创建时的日期时间</td>
+<td>发布时间，强烈建议填写此选项，且最好保证全局唯一</td>
+</tr>
+<tr>
+<td>author</td>
+<td>根 _config.yml 中的 author</td>
+<td>文章作者</td>
+</tr>
+<tr>
+<td>img</td>
+<td>featureImages 中的某个值</td>
+<td>文章特征图，推荐使用图床 (腾讯云、七牛云、又拍云等) 来做图片的路径。如: <span class="exturl" data-url="aHR0cDovL3h4eC5jb20veHh4LmpwZw==">http://xxx.com/xxx.jpg</span></td>
+</tr>
+<tr>
+<td>top</td>
+<td>true</td>
+<td>推荐文章（文章是否置顶），如果 top 值为 true，则会作为首页推荐文章</td>
+</tr>
+<tr>
+<td>cover</td>
+<td>false</td>
+<td>v1.0.2 版本新增，表示该文章是否需要加入到首页轮播封面中</td>
+</tr>
+<tr>
+<td>coverImg</td>
+<td>无</td>
+<td>v1.0.2 版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</td>
+</tr>
+<tr>
+<td>password</td>
+<td>无</td>
+<td>文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 password 的值，该值必须是用 SHA256 加密后的密码，防止被他人识破。前提是在主题的 config.yml 中激活了 verifyPassword 选项</td>
+</tr>
+<tr>
+<td>toc</td>
+<td>true</td>
+<td>是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 config.yml 中激活了 toc 选项</td>
+</tr>
+<tr>
+<td>mathjax</td>
+<td>false</td>
+<td>是否开启数学公式支持 ，本文章是否开启 mathjax，且需要在主题的 _config.yml 文件中也需要开启才行</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>无</td>
+<td>文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>无</td>
+<td>文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>无</td>
+<td>文章标签，一篇文章可以多个标签</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>文章标题</td>
+<td>文章关键字，SEO 时需要</td>
+</tr>
+<tr>
+<td>reprintPolicy</td>
+<td>cc_by</td>
+<td>文章转载规则， 可以是 cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint 或 pay 中的一个</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>注意:</pre></td></tr><tr><td data-num="2"></td><td><pre>    如果 img 属性不填写的话，文章特色图会根据文章标题的 hashcode 的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图各有特色。</pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token function">date</span> 的值尽量保证每篇文章是唯一的，因为本主题中 Gitalk 和 Gitment 识别 <span class="token function">id</span> 是通过 <span class="token function">date</span> 的值来作为唯一标识的。</pre></td></tr><tr><td data-num="4"></td><td><pre>    如果要对文章设置阅读验证密码的功能，不仅要在 Front-matter 中设置采用了 SHA256 加密的 password 的值，还需要在主题的 _config.yml 中激活了配置。有些在线的 SHA256 加密的地址，可供你使用：开源中国在线工具、chahuo、站长工具。</pre></td></tr><tr><td data-num="5"></td><td><pre>    您可以在文章md文件的 front-matter 中指定 reprintPolicy 来给单个文章配置转载规则</pre></td></tr></table></figure><p>以下为文章的  <code>Front-matter</code>  示例。<br />
+最简示例</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>---</pre></td></tr><tr><td data-num="2"></td><td><pre>title: typora-vue-theme主题介绍</pre></td></tr><tr><td data-num="3"></td><td><pre>date: <span class="token number">2018</span>-09-07 09:25:00</pre></td></tr><tr><td data-num="4"></td><td><pre>---</pre></td></tr></table></figure><p>最全示例</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>---</pre></td></tr><tr><td data-num="2"></td><td><pre>title: theme主题介绍</pre></td></tr><tr><td data-num="3"></td><td><pre>date: <span class="token number">2018</span>-09-07 09:25:00</pre></td></tr><tr><td data-num="4"></td><td><pre>author: 赵奇</pre></td></tr><tr><td data-num="5"></td><td><pre>img: /source/images/xxx.jpg</pre></td></tr><tr><td data-num="6"></td><td><pre>top: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="7"></td><td><pre>cover: <span class="token boolean">true</span></pre></td></tr><tr><td data-num="8"></td><td><pre>coverImg: /images/1.jpg</pre></td></tr><tr><td data-num="9"></td><td><pre>password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92</pre></td></tr><tr><td data-num="10"></td><td><pre>toc: <span class="token boolean">false</span></pre></td></tr><tr><td data-num="11"></td><td><pre>mathjax: <span class="token boolean">false</span></pre></td></tr><tr><td data-num="12"></td><td><pre>summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</pre></td></tr><tr><td data-num="13"></td><td><pre>categories: Markdown</pre></td></tr><tr><td data-num="14"></td><td><pre>tags:</pre></td></tr><tr><td data-num="15"></td><td><pre>  - Typora</pre></td></tr><tr><td data-num="16"></td><td><pre>  - Markdown</pre></td></tr><tr><td data-num="17"></td><td><pre>---</pre></td></tr></table></figure><h4 id="224-自定制修改"><a class="anchor" href="#224-自定制修改">#</a> 2.24 自定制修改</h4>
+<p>在本主题的  <code>_config.yml</code>  中可以修改部分自定义信息，有以下几个部分：</p>
+<ul>
+<li>菜单</li>
+<li>我的梦想</li>
+<li>首页的音乐播放器和视频播放器配置</li>
+<li>是否显示推荐文章名称和按钮配置</li>
+<li>favicon 和 Logo</li>
+<li>个人信息</li>
+<li>TOC 目录</li>
+<li>文章打赏信息</li>
+<li>复制文章内容时追加版权信息</li>
+<li>MathJax</li>
+<li>文章字数统计、阅读时长</li>
+<li>点击页面的 ' 爱心 ' 效果</li>
+<li>我的项目</li>
+<li>我的技能</li>
+<li>我的相册</li>
+<li>Gitalk、Gitment、Valine 和 disqus 评论配置</li>
+<li>不蒜子统计和谷歌分析（Google Analytics）</li>
+<li>默认特色图的集合。当文章没有设置特色图时，本主题会根据文章标题的 hashcode 值取余，来选择展示对应的特色图</li>
+</ul>
+<p>我认为个人博客应该都有自己的风格和特色。如果本主题中的诸多功能和主题色彩你不满意，可以在主题中自定义修改，很多更自由的功能和细节点的修改难以在主题的 _config.yml 中完成，需要修改源代码才来完成。以下列出了可能对你有用的地方：<br />
+修改主题颜色</p>
+<p>在主题文件的  <code>/source/css/matery.css</code>  文件中，搜索  <code>.bg-color</code>  来修改背景颜色：</p>
+<figure class="highlight css"><figcaption data-lang="CSS"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">/* 整体背景颜色，包括导航、移动端的导航、页尾、标签页等的背景颜色. */</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token selector">.bg-color</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right<span class="token punctuation">,</span> #4cbf30 0%<span class="token punctuation">,</span> #0f9d58 100%<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token atrule"><span class="token rule">@-webkit-keyframes</span> rainbow</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>   <span class="token comment">/* 动态切换背景颜色. */</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token atrule"><span class="token rule">@keyframes</span> rainbow</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token comment">/* 动态切换背景颜色. */</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="13"></td><td><pre></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token selector">body</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    <span class="token comment">/* background-color: #eaeaea; */</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token comment">/* 增加背景壁纸 */</span></pre></td></tr><tr><td data-num="17"></td><td><pre>    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"https://ae01.alicdn.com/kf/H18a4b998752a4ae68b8e85d432a5aef0l.png"</span><span class="token punctuation">)</span></span><span class="token punctuation">,</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"http://luckyzmj.cn/img/yun.jpg"</span><span class="token punctuation">)</span></span> 0px 0px<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="18"></td><td><pre>    <span class="token property">background-attachment</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>    <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>    <span class="token property">color</span><span class="token punctuation">:</span> #34495e<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="21"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><h4 id="225-修改-banner-图和文章特色图"><a class="anchor" href="#225-修改-banner-图和文章特色图">#</a> 2.25 修改 banner 图和文章特色图</h4>
+<p>你可以直接在  <code>/source/medias/banner</code>  文件夹中更换你喜欢的  <code>banner</code>  图片，主题代码中是每天动态切换一张，只需 7 张即可。如果你会  <code>JavaScript</code>  代码，可以修改成你自己喜欢切换逻辑，如：随机切换等，banner 切换的代码位置在  <code>/layout/_partial/bg-cover-content.ejs</code>  文件的  <code>&lt;script&gt;&lt;/script&gt;</code>  代码中：</p>
+<figure class="highlight css"><figcaption data-lang="CSS"></figcaption><table><tr><td data-num="1"></td><td><pre>$<span class="token punctuation">(</span><span class="token string">'.bg-cover'</span><span class="token punctuation">)</span>.<span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'background-image'</span><span class="token punctuation">,</span> <span class="token string">'url(/medias/banner/'</span> + new <span class="token function">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span>.<span class="token function">getDay</span><span class="token punctuation">(</span><span class="token punctuation">)</span> + <span class="token string">'.jpg)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><p>在  <code>/source/medias/featureimages</code>  文件夹中默认有 24 张特色图片，你可以再增加或者减少，并需要在  <code>_config.yml</code>  做同步修改。</p>
+<h4 id="226-优化目录栏"><a class="anchor" href="#226-优化目录栏">#</a> 2.26 优化目录栏</h4>
+<p>在  <code>themes\Matery\layout\_partial\post-detail-toc.ejs</code> ，修改内容如下：</p>
+<figure class="highlight css"><figcaption data-lang="CSS"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token selector">.toc-widget</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token property">padding-left</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token property">width</span><span class="token punctuation">:</span> 345px<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span>0.7<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 10px 35px 2px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .15<span class="token punctuation">)</span><span class="token punctuation">,</span> 0 5px 15px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .07<span class="token punctuation">)</span><span class="token punctuation">,</span> 0 2px 5px -5px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .1<span class="token punctuation">)</span> <span class="token important">!important</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token selector">#toc-content</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><h2 id="0x005-更多详细教程"><a class="anchor" href="#0x005-更多详细教程">#</a> 0x005 更多详细教程</h2>
+<p>以下几篇文章都是基于 <code>Hexo</code>  框架和 <code>hexo-theme-matery</code>  主题优化的教程，大家如果遇到问题，可以参考其中的方法。</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9zdW5od2VlLmNvbS9wb3N0cy82ZTg4MzllYi5odG1s">Hexo+Github 博客搭建完全教程</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JsaW5rZm94L2hleG8tdGhlbWUtbWF0ZXJ5L2Jsb2IvZGV2ZWxvcC9SRUFETUVfQ04ubWQ=">hexo-theme-matery 作者教程</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly95YWZpbmUtYmxvZy5jbi9wb3N0cy80YWIyLmh0bWw=">Hexo+github 搭建博客 (超级详细版，精细入微)</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2N1bmd1ZGFmYS9hcnRpY2xlL2RldGFpbHMvMTA2Mjc4MjA2">hexo（matery）背景、滚动条优化 + 增加点击跳评论</span></li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/Hexo/" rel="tag"><i class="ic i-tag"></i> Hexo</a>
+          <a href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag"><i class="ic i-tag"></i> 博客</a>
+          <a href="/tags/Github/" rel="tag"><i class="ic i-tag"></i> Github</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-08-26 19:20:47" itemprop="dateModified" datetime="2021-08-26T19:20:47+08:00">2021-08-26</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="逸尘 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="逸尘 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="逸尘 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>逸尘 <i class="ic i-at"><em>@</em></i>逸尘
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://yichenm.github.io.git/2020/03/24/blog/Blog/" title="个人博客搭建">https://yichenm.github.io.git/2020/03/24/blog/Blog/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/03/15/blog/PicGo-GitHub/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipev1x5e4j20zk0m8b29.jpg" title="PicGo+GitHub 图床搭建">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 博客篇</span>
+  <h3>PicGo+GitHub 图床搭建</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2020/03/27/blog/jQuery+CSS3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclfdu6exj20zk0m87hw.jpg" title="文字背景粒子特效">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 前端篇</span>
+  <h3>文字背景粒子特效</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0x001-%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA"><span class="toc-number">1.</span> <span class="toc-text"> 0x001 效果演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x002-%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text"> 0x002 简单介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x003-hexo-%E5%88%9D%E7%BA%A7%E6%90%AD%E5%BB%BA"><span class="toc-number">3.</span> <span class="toc-text"> 0x003 Hexo 初级搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85git"><span class="toc-number">3.1.</span> <span class="toc-text"> 1. 安装 Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85nodejs"><span class="toc-number">3.2.</span> <span class="toc-text"> 2. 安装 node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%B7%BB%E5%8A%A0npm%E5%9B%BD%E5%86%85%E6%BA%90"><span class="toc-number">3.3.</span> <span class="toc-text"> 3. 添加 npm 国内源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%AE%89%E8%A3%85hexo"><span class="toc-number">3.4.</span> <span class="toc-text"> 4. 安装 Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%B3%A8%E5%86%8Cgithub%E8%B4%A6%E5%8F%B7%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%BB%93%E5%BA%93"><span class="toc-number">3.5.</span> <span class="toc-text"> 5. 注册 Github 账号创建个人仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E7%94%9F%E6%88%90ssh%E6%B7%BB%E5%8A%A0%E5%88%B0github"><span class="toc-number">3.6.</span> <span class="toc-text"> 6. 生成 SSH 添加到 GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0github"><span class="toc-number">3.7.</span> <span class="toc-text"> 7. 将 hexo 部署到 GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E5%86%99%E6%96%87%E7%AB%A0%E5%92%8C%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0"><span class="toc-number">3.8.</span> <span class="toc-text"> 8. 写文章和发布文章</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x004-hexo-%E4%BC%98%E5%8C%96%E5%AE%9A%E5%88%B6"><span class="toc-number">4.</span> <span class="toc-text"> 0x004 Hexo 优化定制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-hexo%E7%9B%B8%E5%85%B3%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6"><span class="toc-number">4.1.</span> <span class="toc-text"> 1. Hexo 相关目录文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#11-%E5%8D%9A%E5%AE%A2%E7%9B%AE%E5%BD%95%E6%9E%84%E6%88%90%E4%BB%8B%E7%BB%8D"><span class="toc-number">4.1.1.</span> <span class="toc-text"> 1.1 博客目录构成介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-hexo%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-number">4.1.2.</span> <span class="toc-text"> 1.2 hexo 基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#121-%E7%BD%91%E7%AB%99"><span class="toc-number">4.1.2.1.</span> <span class="toc-text"> 1.2.1 网站</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#122-%E7%BD%91%E5%9D%80"><span class="toc-number">4.1.2.2.</span> <span class="toc-text"> 1.2.2 网址</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%9A%E5%88%B6%E4%B8%BB%E9%A2%98"><span class="toc-number">4.2.</span> <span class="toc-text"> 2. 定制主题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#21-%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">4.2.1.</span> <span class="toc-text"> 2.1 简单使用方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#22-%E5%8E%9F%E4%B8%BB%E9%A2%98%E7%89%B9%E6%80%A7"><span class="toc-number">4.2.2.</span> <span class="toc-text"> 2.2 原主题特性:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#23-%E6%96%B0%E5%A2%9E%E5%8A%A0%E7%89%B9%E6%80%A7"><span class="toc-number">4.2.3.</span> <span class="toc-text"> 2.3 新增加特性:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#24-%E5%88%87%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="toc-number">4.2.4.</span> <span class="toc-text"> 2.4 切换主题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#25-%E6%96%B0%E5%BB%BA%E5%88%86%E7%B1%BB-categories-%E9%A1%B5"><span class="toc-number">4.2.5.</span> <span class="toc-text"> 2.5 新建分类 categories 页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#26-%E6%96%B0%E5%BB%BA%E6%A0%87%E7%AD%BE-tags-%E9%A1%B5"><span class="toc-number">4.2.6.</span> <span class="toc-text"> 2.6 新建标签 tags 页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#27-%E6%96%B0%E5%BB%BA%E5%85%B3%E4%BA%8E%E6%88%91-about-%E9%A1%B5"><span class="toc-number">4.2.7.</span> <span class="toc-text"> 2.7 新建关于我 about 页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#28-%E6%96%B0%E5%BB%BA%E7%95%99%E8%A8%80%E6%9D%BF-contact-%E9%A1%B5%E5%8F%AF%E9%80%89%E7%9A%84"><span class="toc-number">4.2.8.</span> <span class="toc-text"> 2.8 新建留言板 contact 页（可选的）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#29-%E6%96%B0%E5%BB%BA%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-friends-%E9%A1%B5%E5%8F%AF%E9%80%89%E7%9A%84"><span class="toc-number">4.2.9.</span> <span class="toc-text"> 2.9 新建友情链接 friends 页（可选的）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#210-%E4%B8%80%E7%BA%A7%E8%8F%9C%E5%8D%95%E5%AF%BC%E8%88%AA%E9%85%8D%E7%BD%AE"><span class="toc-number">4.2.10.</span> <span class="toc-text"> 2.10 一级菜单导航配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#211-%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95"><span class="toc-number">4.2.11.</span> <span class="toc-text"> 2.11 二级菜单配置方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#212-%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE"><span class="toc-number">4.2.12.</span> <span class="toc-text"> 2.12 代码高亮</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#213-%E6%90%9C%E7%B4%A2"><span class="toc-number">4.2.13.</span> <span class="toc-text"> 2.13 搜索</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#214-%E6%96%87%E7%AB%A0%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1%E6%8F%92%E4%BB%B6%E5%BB%BA%E8%AE%AE%E5%AE%89%E8%A3%85"><span class="toc-number">4.2.14.</span> <span class="toc-text"> 2.14 文章字数统计插件（建议安装）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#215-%E6%B7%BB%E5%8A%A0emoji%E8%A1%A8%E6%83%85%E6%94%AF%E6%8C%81%E5%8F%AF%E9%80%89%E7%9A%84"><span class="toc-number">4.2.15.</span> <span class="toc-text"> 2.15 添加 emoji 表情支持（可选的）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#216-%E6%B7%BB%E5%8A%A0-rss-%E8%AE%A2%E9%98%85%E6%94%AF%E6%8C%81%E5%8F%AF%E9%80%89%E7%9A%84"><span class="toc-number">4.2.16.</span> <span class="toc-text"> 2.16 添加 RSS 订阅支持（可选的）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#217-%E6%B7%BB%E5%8A%A0-daovoice-%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9%E5%8A%9F%E8%83%BD%E5%8F%AF%E9%80%89%E7%9A%84"><span class="toc-number">4.2.17.</span> <span class="toc-text"> 2.17 添加 DaoVoice 在线聊天功能（可选的）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#218-%E6%B7%BB%E5%8A%A0-tidio-%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9%E5%8A%9F%E8%83%BD%E5%8F%AF%E9%80%89%E7%9A%84"><span class="toc-number">4.2.18.</span> <span class="toc-text"> 2.18 添加 Tidio 在线聊天功能（可选的）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#219-%E4%BF%AE%E6%94%B9%E9%A1%B5%E8%84%9A"><span class="toc-number">4.2.19.</span> <span class="toc-text"> 2.19 修改页脚</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#220-%E4%BF%AE%E6%94%B9%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5"><span class="toc-number">4.2.20.</span> <span class="toc-text"> 2.20 修改社交链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#221-%E4%BF%AE%E6%94%B9%E6%89%93%E8%B5%8F%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%9B%BE%E7%89%87"><span class="toc-number">4.2.21.</span> <span class="toc-text"> 2.21 修改打赏的二维码图片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#222-%E9%85%8D%E7%BD%AE%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%8F%AF%E9%80%89%E7%9A%84"><span class="toc-number">4.2.22.</span> <span class="toc-text"> 2.22 配置音乐播放器（可选的）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#223%E6%96%87%E7%AB%A0-front-matter-%E4%BB%8B%E7%BB%8D"><span class="toc-number">4.2.23.</span> <span class="toc-text"> 2.23 文章 Front-matter 介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#224-%E8%87%AA%E5%AE%9A%E5%88%B6%E4%BF%AE%E6%94%B9"><span class="toc-number">4.2.24.</span> <span class="toc-text"> 2.24 自定制修改</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#225-%E4%BF%AE%E6%94%B9-banner-%E5%9B%BE%E5%92%8C%E6%96%87%E7%AB%A0%E7%89%B9%E8%89%B2%E5%9B%BE"><span class="toc-number">4.2.25.</span> <span class="toc-text"> 2.25 修改 banner 图和文章特色图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#226-%E4%BC%98%E5%8C%96%E7%9B%AE%E5%BD%95%E6%A0%8F"><span class="toc-number">4.2.26.</span> <span class="toc-text"> 2.26 优化目录栏</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x005-%E6%9B%B4%E5%A4%9A%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B"><span class="toc-number">5.</span> <span class="toc-text"> 0x005 更多详细教程</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2020/03/15/blog/PicGo-GitHub/" rel="bookmark" title="PicGo+GitHub 图床搭建">PicGo+GitHub 图床搭建</a></li><li class="active"><a href="/2020/03/24/blog/Blog/" rel="bookmark" title="个人博客搭建">个人博客搭建</a></li><li><a href="/2020/06/17/blog/BlogOpen/" rel="bookmark" title="Blog开源搭建教程">Blog开源搭建教程</a></li><li><a href="/2020/06/20/blog/Hexo-xr/" rel="bookmark" title="Hexo之渲染绕过">Hexo之渲染绕过</a></li><li><a href="/2021/01/24/blog/blog-aliyun/" rel="bookmark" title="阿里云服务器部署Hexo博客">阿里云服务器部署Hexo博客</a></li><li><a href="/2021/05/24/computer-science/note/Blog/" rel="bookmark" title="个人博客搭建">个人博客搭建</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="逸尘"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">逸尘</p>
+  <div class="description" itemprop="description">专注于编程,分享生活,分享知识</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">24</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">13</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">16</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lpY2hlbm0=" title="https:&#x2F;&#x2F;github.com&#x2F;yichenm"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>链接</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/musics/" rel="section"><i class="ic i-music"></i>音乐</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/movies/" rel="section"><i class="ic i-sakura"></i>视频</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/03/15/blog/PicGo-GitHub/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2020/03/27/blog/jQuery+CSS3/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/course-1/" title="分类于 零基础学Java语言">零基础学Java语言</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/JavaSE%E7%AF%87/" title="分类于 JavaSE篇">JavaSE篇</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" title="分类于 编程语言">编程语言</a>
+</div>
+
+    <span><a href="/2020/04/20/computer-science/java/course-1/week3/" title="JavaSE基础知识点归纳总结">JavaSE基础知识点归纳总结</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E7%AF%87/" title="分类于 前端篇">前端篇</a>
+</div>
+
+    <span><a href="/2020/03/27/blog/jQuery+CSS3/" title="文字背景粒子特效">文字背景粒子特效</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2013/12/25/blog/no-title/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客篇">博客篇</a>
+</div>
+
+    <span><a href="/2021/01/24/blog/blog-aliyun/" title="阿里云服务器部署Hexo博客">阿里云服务器部署Hexo博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2013/12/25/blog/excerpts/" title="Excerpts">Excerpts</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2019/07/25/blog/code-highlight/" title="Code Highlight Style test">Code Highlight Style test</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/note/" title="分类于 二进制杂谈">二进制杂谈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/note/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/2020/08/13/computer-science/note/theme-shoka-doc/" title="Hexo主题Shoka &amp; multi-markdown-it渲染器使用说明">Hexo主题Shoka & multi-markdown-it渲染器使用说明</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客篇">博客篇</a>
+</div>
+
+    <span><a href="/2020/06/20/blog/Hexo-xr/" title="Hexo之渲染绕过">Hexo之渲染绕过</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/note/" title="分类于 二进制杂谈">二进制杂谈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/note/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/2020/08/13/computer-science/note/theme-shoka-doc/config/" title="Step.2 基本配置">Step.2 基本配置</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Foo/" title="分类于 Foo">Foo</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Foo/Bar/" title="分类于 Bar">Bar</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Foo/Bar/Baz/" title="分类于 Baz">Baz</a>
+</div>
+
+    <span><a href="/2013/12/24/blog/categories/" title="Categories">Categories</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">逸尘 @ Yi Chen</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/03/24/blog/Blog/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
