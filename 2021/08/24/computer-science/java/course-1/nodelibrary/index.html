@@ -1,0 +1,633 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="逸尘" href="https://yichenm.github.io.git/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="逸尘" href="https://yichenm.github.io.git/atom.xml" />
+<link rel="alternate" type="application/json" title="逸尘" href="https://yichenm.github.io.git/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="JavaSE篇" />
+
+
+<link rel="canonical" href="https://yichenm.github.io.git/2021/08/24/computer-science/java/course-1/nodelibrary/">
+
+
+<meta name="description" content="# 项目简介 # 图书管理小项目的主要目的是为了让学完 javaSE 的我对之前掌握的知识做一些运用，该项目的知识点包括下面内容： 1. 面向对象的思想  2. 分层的思想  3. 接口  4. 异常  5. 集合  6. 日期处理  7.Stream 流  8.IO 流  9. 反射 #项目展示 通过本项目，我觉得可以巩固 javaSE 的知识，对于后续的学习来说可以起到很好的衔接。  #用户管">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaSE实战项目图书管理系统">
+<meta property="og:url" content="https://yichenm.github.io.git/2021/08/24/computer-science/java/course-1/nodelibrary/index.html">
+<meta property="og:site_name" content="逸尘">
+<meta property="og:description" content="# 项目简介 # 图书管理小项目的主要目的是为了让学完 javaSE 的我对之前掌握的知识做一些运用，该项目的知识点包括下面内容： 1. 面向对象的思想  2. 分层的思想  3. 接口  4. 异常  5. 集合  6. 日期处理  7.Stream 流  8.IO 流  9. 反射 #项目展示 通过本项目，我觉得可以巩固 javaSE 的知识，对于后续的学习来说可以起到很好的衔接。  #用户管">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://image-1306118776.cos.ap-shanghai.myqcloud.com/1.png">
+<meta property="og:image" content="https://image-1306118776.cos.ap-shanghai.myqcloud.com/2.png">
+<meta property="og:image" content="https://image-1306118776.cos.ap-shanghai.myqcloud.com/3.png">
+<meta property="og:image" content="https://image-1306118776.cos.ap-shanghai.myqcloud.com/4.png">
+<meta property="article:published_time" content="2021-08-24T03:41:03.000Z">
+<meta property="article:modified_time" content="2021-08-30T04:36:09.485Z">
+<meta property="article:author" content="逸尘">
+<meta property="article:tag" content="JavaSE篇">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image-1306118776.cos.ap-shanghai.myqcloud.com/1.png">
+
+
+  <title>
+JavaSE实战项目图书管理系统 - 零基础学Java语言- - Java - 计算机科学 |
+Yi Chen = 逸尘 = 逸尘の博客</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">JavaSE实战项目图书管理系统
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2021-08-24 11:41:03">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-08-24T11:41:03+08:00">2021-08-24</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yi Chen</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciukx8a7j20zk0m8aio.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/" itemprop="item" rel="index" title="分类于 计算机科学"><span itemprop="name">计算机科学</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/java/" itemprop="item" rel="index" title="分类于 Java"><span itemprop="name">Java</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/java/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6Java%E8%AF%AD%E8%A8%80/" itemprop="item" rel="index" title="分类于 零基础学Java语言-"><span itemprop="name">零基础学Java语言-</span></a>
+<meta itemprop="position" content="3" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://yichenm.github.io.git/2021/08/24/computer-science/java/course-1/nodelibrary/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="逸尘">
+    <meta itemprop="description" content="逸尘の博客, 专注于编程,分享生活,分享知识">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="逸尘">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="项目简介"><a class="anchor" href="#项目简介">#</a> 项目简介</h1>
+<h2 id="图书管理小项目的主要目的是为了让学完javase的我对之前掌握的知识做一些运用该项目的知识点包括下面内容1面向对象的思想2分层的思想3接口4异常5集合6日期处理7stream流8io流9反射"><a class="anchor" href="#图书管理小项目的主要目的是为了让学完javase的我对之前掌握的知识做一些运用该项目的知识点包括下面内容1面向对象的思想2分层的思想3接口4异常5集合6日期处理7stream流8io流9反射">#</a> 图书管理小项目的主要目的是为了让学完 javaSE 的我对之前掌握的知识做一些运用，该项目的知识点包括下面内容：<br />
+1. 面向对象的思想<br />
+ 2. 分层的思想<br />
+ 3. 接口<br />
+ 4. 异常<br />
+ 5. 集合<br />
+ 6. 日期处理<br />
+ 7.Stream 流<br />
+ 8.IO 流<br />
+ 9. 反射</h2>
+<p>#项目展示<br />
+通过本项目，我觉得可以巩固 javaSE 的知识，对于后续的学习来说可以起到很好的衔接。</p>
+<hr />
+<p>#用户管理界面展示<br />
+用户管理界面有最基础的 curd4 个功能，首先创建 DAO 层，然后写接口，在接口里写 curd 的方法，再创建 impl 包，在 impl 包下去写实现类，实现接口里的方法。通过 service 层去调用 DAO 层，Control 层去调用 service 层去实现功能。而充值冻结则在后续的 service 层中写相关代码。具体实现后的图如下。<br />
+<img data-src="https://image-1306118776.cos.ap-shanghai.myqcloud.com/1.png" alt="" /></p>
+<h2 id="代码就不在这里写了有能力的可以自己尝试写一写这里只提供一种思路"><a class="anchor" href="#代码就不在这里写了有能力的可以自己尝试写一写这里只提供一种思路">#</a> 代码就不在这里写了，有能力的可以自己尝试写一写，这里只提供一种思路。</h2>
+<p>#图书管理界面展示<br />
+图书管理界面与用户管理界面大同小异，也是在 DAO 层中写最基本的增删改查，然后调用即可，与用户管理不同的是图书管理除了最基本的查询之外还有具体的条件查询，根据图书名字和 isbn 来查询具体的图书。最后的借阅功能关联到下一个借阅管理页面，这里涉及到跨页面的数据传输。具体实现后的图如下<br />
+<img data-src="https://image-1306118776.cos.ap-shanghai.myqcloud.com/2.png" alt="" /></p>
+<hr />
+<p>## 借阅管理界面展示<br />
+借阅管理界面是将用户管理和图书管理页面功能都实现后再去做的一个页面，因为涉及到一些图书的数据和用户的数据。在图书管理界面点击借阅后会要让借阅管理界面添加一条数据，数据里包含当前借书的用户和书名，还有当前日期和归还日期等等。具体实现图如下<br />
+<img data-src="https://image-1306118776.cos.ap-shanghai.myqcloud.com/3.png" alt="" /></p>
+<hr />
+<p>## 图书统计界面展示<br />
+这一块还是比较简单的，只需要拿到图书管理界面的图书类型数据进行一个分类统计即可，让后将数据传给前端进行展示即可。具体实现后图如下<br />
+<img data-src="https://image-1306118776.cos.ap-shanghai.myqcloud.com/4.png" alt="" /></p>
+<hr />
+<p>## 初始化数据<br />
+因为本身项目是没有数据库的，数据全部都是写在硬盘文件当中，所以一般写一个工具类来初始化数据，给定一个默认的数据，而不是假数据。假数据就是程序从内存中读出来的数据，如果你将程序或者电脑关机他就会消失，因此我们得将数据持久化到硬盘当中即可。代码如下</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>bjpowernode<span class="token punctuation">.</span>util</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">import</span> <span class="token namespace">com<span class="token punctuation">.</span>bjpowernode<span class="token punctuation">.</span>bean<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">import</span> <span class="token namespace">com<span class="token punctuation">.</span>sun<span class="token punctuation">.</span>corba<span class="token punctuation">.</span>se<span class="token punctuation">.</span>spi<span class="token punctuation">.</span>legacy<span class="token punctuation">.</span>connection<span class="token punctuation">.</span></span><span class="token class-name">LegacyServerSocketEndPointInfo</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">File</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">FileOutputStream</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">IOException</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">ObjectOutputStream</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>math<span class="token punctuation">.</span></span><span class="token class-name">BigDecimal</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>time<span class="token punctuation">.</span></span><span class="token class-name">LocalDate</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>UUID<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">InitDataUtil</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="17"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="18"></td><td><pre>        <span class="token comment">// 初始化用户数据</span></pre></td></tr><tr><td data-num="19"></td><td><pre>        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">></span></span> userList<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>        userList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token number">1001</span><span class="token punctuation">,</span><span class="token string">"逸尘"</span><span class="token punctuation">,</span> <span class="token class-name">Constant</span><span class="token punctuation">.</span>USER_OK <span class="token punctuation">,</span> <span class="token class-name">BigDecimal</span><span class="token punctuation">.</span>TEN<span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>        <span class="token function">initData</span><span class="token punctuation">(</span><span class="token class-name">PathConstant</span><span class="token punctuation">.</span>USER_PATH<span class="token punctuation">,</span>userList<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="22"></td><td><pre>        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Book</span><span class="token punctuation">></span></span> bookList<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>        bookList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">"java入门到入土"</span><span class="token punctuation">,</span><span class="token string">"逸尘"</span><span class="token punctuation">,</span><span class="token class-name">Constant</span><span class="token punctuation">.</span>TYPE_COMPUTER<span class="token punctuation">,</span><span class="token string">"123-1"</span><span class="token punctuation">,</span><span class="token string">"机械工业出版社"</span><span class="token punctuation">,</span><span class="token class-name">Constant</span><span class="token punctuation">.</span>STATUS_STORAGE<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="24"></td><td><pre>        bookList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">"数据库删库到跑路"</span><span class="token punctuation">,</span><span class="token string">"逸尘"</span><span class="token punctuation">,</span><span class="token class-name">Constant</span><span class="token punctuation">.</span>TYPE_COMPUTER<span class="token punctuation">,</span><span class="token string">"123-1"</span><span class="token punctuation">,</span><span class="token string">"机械工业出版社"</span><span class="token punctuation">,</span><span class="token class-name">Constant</span><span class="token punctuation">.</span>STATUS_STORAGE<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="25"></td><td><pre>        <span class="token function">initData</span><span class="token punctuation">(</span><span class="token class-name">PathConstant</span><span class="token punctuation">.</span>BOOK_PATH<span class="token punctuation">,</span>bookList<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="26"></td><td><pre>        <span class="token comment">// 初始化借阅数据</span></pre></td></tr><tr><td data-num="27"></td><td><pre>        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Lend</span><span class="token punctuation">></span></span> lendList<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="28"></td><td><pre>        <span class="token class-name">User</span> user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token number">1001</span><span class="token punctuation">,</span> <span class="token string">"逸尘"</span><span class="token punctuation">,</span> <span class="token class-name">Constant</span><span class="token punctuation">.</span>USER_OK<span class="token punctuation">,</span> <span class="token class-name">BigDecimal</span><span class="token punctuation">.</span>TEN<span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="29"></td><td><pre>        <span class="token class-name">Book</span> book <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"java入门到入土"</span><span class="token punctuation">,</span> <span class="token string">"逸尘"</span><span class="token punctuation">,</span> <span class="token class-name">Constant</span><span class="token punctuation">.</span>TYPE_COMPUTER<span class="token punctuation">,</span> <span class="token string">"123-1"</span><span class="token punctuation">,</span> <span class="token string">"机械工业出版社"</span><span class="token punctuation">,</span> <span class="token class-name">Constant</span><span class="token punctuation">.</span>STATUS_STORAGE<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="30"></td><td><pre>        <span class="token class-name">Lend</span> lend <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Lend</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="31"></td><td><pre></pre></td></tr><tr><td data-num="32"></td><td><pre>        <span class="token comment">// 使用 UUID 生成编号 (不想让用户手动输入，且不能用这种自动增长的操作下使用)</span></pre></td></tr><tr><td data-num="33"></td><td><pre></pre></td></tr><tr><td data-num="34"></td><td><pre>        lend<span class="token punctuation">.</span><span class="token function">setId</span><span class="token punctuation">(</span> UUID<span class="token punctuation">.</span><span class="token function">randomUUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="35"></td><td><pre></pre></td></tr><tr><td data-num="36"></td><td><pre>        lend<span class="token punctuation">.</span><span class="token function">setUser</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="37"></td><td><pre>        lend<span class="token punctuation">.</span><span class="token function">setBook</span><span class="token punctuation">(</span>book<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="38"></td><td><pre>        lend<span class="token punctuation">.</span><span class="token function">setStatus</span><span class="token punctuation">(</span><span class="token class-name">Constant</span><span class="token punctuation">.</span>STATUS_LEND<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="39"></td><td><pre>        <span class="token class-name">LocalDate</span> begin <span class="token operator">=</span> <span class="token class-name">LocalDate</span><span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="40"></td><td><pre>        lend<span class="token punctuation">.</span><span class="token function">setLendDate</span><span class="token punctuation">(</span>begin<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="41"></td><td><pre>        <span class="token comment">// 设置归还日期</span></pre></td></tr><tr><td data-num="42"></td><td><pre>        lend<span class="token punctuation">.</span><span class="token function">setReturnDate</span><span class="token punctuation">(</span>begin<span class="token punctuation">.</span><span class="token function">plusDays</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="43"></td><td><pre></pre></td></tr><tr><td data-num="44"></td><td><pre>        lendList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>lend<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="45"></td><td><pre>        <span class="token function">initData</span><span class="token punctuation">(</span><span class="token class-name">PathConstant</span><span class="token punctuation">.</span>LEND_PATH<span class="token punctuation">,</span>lendList<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="46"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="47"></td><td><pre></pre></td></tr><tr><td data-num="48"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">static</span>  <span class="token keyword">void</span>  <span class="token function">initData</span><span class="token punctuation">(</span><span class="token class-name">String</span> path<span class="token punctuation">,</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">></span></span> list<span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="49"></td><td><pre>        <span class="token class-name">ObjectOutputStream</span> oos <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="50"></td><td><pre>        <span class="token comment">// 创建相关文件夹   使用 IO 流</span></pre></td></tr><tr><td data-num="51"></td><td><pre>        <span class="token keyword">try</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="52"></td><td><pre>            <span class="token class-name">File</span> directory<span class="token operator">=</span>   <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 截取路径文件中的 user 部分再拼接一个 “/”</span></pre></td></tr><tr><td data-num="53"></td><td><pre>            <span class="token class-name">File</span> file <span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="54"></td><td><pre>            <span class="token comment">// 判断文件夹是否存在</span></pre></td></tr><tr><td data-num="55"></td><td><pre>            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>directory<span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="56"></td><td><pre>                directory<span class="token punctuation">.</span><span class="token function">mkdir</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="57"></td><td><pre></pre></td></tr><tr><td data-num="58"></td><td><pre>            <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="59"></td><td><pre>            <span class="token comment">// 判断文件是否存在</span></pre></td></tr><tr><td data-num="60"></td><td><pre>            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>file<span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="61"></td><td><pre>                file<span class="token punctuation">.</span><span class="token function">createNewFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="62"></td><td><pre></pre></td></tr><tr><td data-num="63"></td><td><pre></pre></td></tr><tr><td data-num="64"></td><td><pre>                <span class="token comment">// 利用对象输出流将 List 数据写出到文件中</span></pre></td></tr><tr><td data-num="65"></td><td><pre>                oos<span class="token operator">=</span>  <span class="token keyword">new</span> <span class="token class-name">ObjectOutputStream</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="66"></td><td><pre>                oos<span class="token punctuation">.</span><span class="token function">writeObject</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="67"></td><td><pre>            <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="68"></td><td><pre>        <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="69"></td><td><pre>            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="70"></td><td><pre>        <span class="token punctuation">&#125;</span> <span class="token keyword">finally</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="71"></td><td><pre>            <span class="token comment">// 关闭流</span></pre></td></tr><tr><td data-num="72"></td><td><pre>            <span class="token keyword">if</span><span class="token punctuation">(</span>oos<span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="73"></td><td><pre>                <span class="token keyword">try</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="74"></td><td><pre>                    oos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="75"></td><td><pre>                <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="76"></td><td><pre>                    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="77"></td><td><pre>                <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="78"></td><td><pre>            <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="79"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="80"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr></table></figure><hr />
+<p>#项目已开源，具体如下<br />
+还有其他很多细节就不补充详细说明了，有兴趣自己得做得可以按照项目源码来边看边写<br />
+ -<span class="exturl" data-url="aHR0cHM6Ly95aWNoZW5tLmNvZGluZy5uZXQvcC9ub2RlbGlicmFyeS9maWxlcy9hbGw="> 项目戳此</span></p>
+
+      <div class="tags">
+          <a href="/tags/JavaSE%E7%AF%87/" rel="tag"><i class="ic i-tag"></i> JavaSE篇</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-08-30 12:36:09" itemprop="dateModified" datetime="2021-08-30T12:36:09+08:00">2021-08-30</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="逸尘 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="逸尘 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="逸尘 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>逸尘 <i class="ic i-at"><em>@</em></i>逸尘
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://yichenm.github.io.git/2021/08/24/computer-science/java/course-1/nodelibrary/" title="JavaSE实战项目图书管理系统">https://yichenm.github.io.git/2021/08/24/computer-science/java/course-1/nodelibrary/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2021/05/24/computer-science/note/Blog/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipetlbztpj20zk0m84qp.jpg" title="个人博客搭建">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 博客篇</span>
+  <h3>个人博客搭建</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text"> 项目简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E5%B0%8F%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%BB%E8%A6%81%E7%9B%AE%E7%9A%84%E6%98%AF%E4%B8%BA%E4%BA%86%E8%AE%A9%E5%AD%A6%E5%AE%8Cjavase%E7%9A%84%E6%88%91%E5%AF%B9%E4%B9%8B%E5%89%8D%E6%8E%8C%E6%8F%A1%E7%9A%84%E7%9F%A5%E8%AF%86%E5%81%9A%E4%B8%80%E4%BA%9B%E8%BF%90%E7%94%A8%E8%AF%A5%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9%E5%8C%85%E6%8B%AC%E4%B8%8B%E9%9D%A2%E5%86%85%E5%AE%B91%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%80%9D%E6%83%B32%E5%88%86%E5%B1%82%E7%9A%84%E6%80%9D%E6%83%B33%E6%8E%A5%E5%8F%A34%E5%BC%82%E5%B8%B85%E9%9B%86%E5%90%886%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%867stream%E6%B5%818io%E6%B5%819%E5%8F%8D%E5%B0%84"><span class="toc-number">1.1.</span> <span class="toc-text"> 图书管理小项目的主要目的是为了让学完 javaSE 的我对之前掌握的知识做一些运用，该项目的知识点包括下面内容：
+
+1. 面向对象的思想
+
+ 2. 分层的思想
+
+ 3. 接口
+
+ 4. 异常
+
+ 5. 集合
+
+ 6. 日期处理
+
+ 7.Stream 流
+
+ 8.IO 流
+
+ 9. 反射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%B0%B1%E4%B8%8D%E5%9C%A8%E8%BF%99%E9%87%8C%E5%86%99%E4%BA%86%E6%9C%89%E8%83%BD%E5%8A%9B%E7%9A%84%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%B7%B1%E5%B0%9D%E8%AF%95%E5%86%99%E4%B8%80%E5%86%99%E8%BF%99%E9%87%8C%E5%8F%AA%E6%8F%90%E4%BE%9B%E4%B8%80%E7%A7%8D%E6%80%9D%E8%B7%AF"><span class="toc-number">1.2.</span> <span class="toc-text"> 代码就不在这里写了，有能力的可以自己尝试写一写，这里只提供一种思路。</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2020/04/12/computer-science/java/course-1/week-1/" rel="bookmark" title="第1周 计算">第1周 计算</a></li><li class="active"><a href="/2021/08/24/computer-science/java/course-1/nodelibrary/" rel="bookmark" title="JavaSE实战项目图书管理系统">JavaSE实战项目图书管理系统</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="逸尘"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">逸尘</p>
+  <div class="description" itemprop="description">专注于编程,分享生活,分享知识</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">25</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">13</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">17</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lpY2hlbm0=" title="https:&#x2F;&#x2F;github.com&#x2F;yichenm"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item qq" data-url="aHR0cDovL3dwYS5xcS5jb20vbXNncmQ/dj0zJnVpbj0xNjYwNTk3MzcwJnNpdGU9cXEmbWVudT15ZXM=" title="http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;1660597370&amp;site&#x3D;qq&amp;menu&#x3D;yes"><i class="ic i-qq"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>链接</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/musics/" rel="section"><i class="ic i-music"></i>音乐</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/movies/" rel="section"><i class="ic i-sakura"></i>视频</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/note/" title="分类于 二进制杂谈">二进制杂谈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/note/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/2020/08/13/computer-science/note/theme-shoka-doc/" title="Hexo主题Shoka &amp; multi-markdown-it渲染器使用说明">Hexo主题Shoka & multi-markdown-it渲染器使用说明</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客篇">博客篇</a>
+</div>
+
+    <span><a href="/2020/03/15/blog/PicGo-GitHub/" title="PicGo+GitHub 图床搭建">PicGo+GitHub 图床搭建</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/note/" title="分类于 二进制杂谈">二进制杂谈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/note/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/2020/08/13/computer-science/note/theme-shoka-doc/display/" title="Step.3 界面显示">Step.3 界面显示</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客篇">博客篇</a>
+</div>
+
+    <span><a href="/2020/06/20/blog/Hexo-xr/" title="Hexo之渲染绕过">Hexo之渲染绕过</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6Java%E8%AF%AD%E8%A8%80/" title="分类于 零基础学Java语言-">零基础学Java语言-</a>
+</div>
+
+    <span><a href="/2020/04/12/computer-science/java/course-1/week-1/" title="第1周 计算">第1周 计算</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/course-1/" title="分类于 零基础学Java语言">零基础学Java语言</a>
+</div>
+
+    <span><a href="/2020/04/13/computer-science/java/course-1/week-2/" title="第2周 判断">第2周 判断</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2013/12/24/blog/elements/" title="Elements">Elements</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客篇">博客篇</a>
+</div>
+
+    <span><a href="/2020/03/24/blog/Blog/" title="个人博客搭建">个人博客搭建</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><span class="exturl" data-url="aHR0cDovL3d3dy5nb29nbGUuY29tLw==" title="www.google.com">www.google.com<i class="ic i-link-alt"></i></span></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6Java%E8%AF%AD%E8%A8%80/" title="分类于 零基础学Java语言-">零基础学Java语言-</a>
+</div>
+
+    <span><a href="/2021/08/24/computer-science/java/course-1/nodelibrary/" title="JavaSE实战项目图书管理系统">JavaSE实战项目图书管理系统</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">逸尘 @ Yi Chen</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/08/24/computer-science/java/course-1/nodelibrary/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: {"placeholder":"暑假时间为了巩固JavaSE的基础，利用纯JavaSE的知识编写了这个图书管理系统，功能比较全，管理图书的功能是最基本的，另外还可以借书还书，充值冻结等等一系列功能，用到了javaSE中大部分的知识点，对已学过的知识点进行查漏补缺。"},fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
